@@ -204,3 +204,96 @@ class Rectangular{
 
 let rect= new Rectangular(5, 10);
 console.log(rect.area());
+
+//Crea una clase Animal con una propiedad nombre y un método hablar. Luego, crea una clase Perro que herede de Animal y sobrescriba el método hablar.
+
+class Animal {
+    nombre: string;
+
+    constructor(nombre: string) {
+        this.nombre = nombre;
+    }
+
+    hablar(): void {
+        console.log(`${this.nombre} hace un sonido.`);
+    }
+}
+
+class Perro extends Animal {
+    hablar(): void {
+        console.log(`${this.nombre} dice: ¡Guau!`);
+    }
+}
+
+let perro = new Perro("Rex");
+perro.hablar(); // Imprime: Rex dice: ¡Guau!
+
+// Crea una clase con propiedades que utilicen los modificadores de acceso public, private y protected para controlar su visibilidad.
+
+class Empleado {
+    public nombre: string;
+    private salario: number;
+    protected puesto: string;
+
+    constructor(nombre: string, salario: number, puesto: string) {
+        this.nombre = nombre;
+        this.salario = salario;
+        this.puesto = puesto;
+    }
+
+    obtenerSalario(): number {
+        return this.salario;
+    }
+}
+
+let empleado = new Empleado("Pedro", 3000, "Desarrollador");
+console.log(empleado.nombre);  
+console.log(empleado.obtenerSalario()); 
+
+//Usa un switch para determinar el día de la semana según un número.
+
+function generarNumeroAleatorio(): number {
+    return Math.floor(Math.random() * 7) + 1;
+}
+
+let dia: number = generarNumeroAleatorio();
+let diaNombre: string;
+
+switch (dia) {
+    case 1:
+        diaNombre = "Lunes";
+        break;
+    case 2:
+        diaNombre = "Martes";
+        break;
+    case 3:
+        diaNombre = "Miércoles";
+        break;
+    case 4:
+        diaNombre = "Jueves";
+        break;
+    case 5:
+        diaNombre = "Viernes";
+        break;
+    case 6:
+        diaNombre = "Sábado";
+        break;
+    case 7:
+        diaNombre = "Domingo";
+        break;
+    default:
+        diaNombre = "Día inválido";
+}
+
+console.log(diaNombre); 
+
+//Usa el bucle for...of para recorrer un array y sumar sus elementos.
+
+let numero4: number[] = [1, 2, 3, 4, 5];
+let suma5: number = 0;
+
+for (let numero4 of numeros) {
+    suma5 += numero4;
+}
+
+console.log(suma); // Imprime: 15
