@@ -1,0 +1,254 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e5e5e5;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #3ba04a;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #F1C40F;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+/* Sección de bienvenida */
+.intro-section {
+    background-image:url(./img/fondo.png);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 25px;
+    height: 80vh;
+    width: 100%;
+}
+
+.intro-section h1 {
+    font-size: 36px;
+    margin: 30vh auto;
+    color: #000000;
+}
+
+.intro-section p {
+    font-size: 18px;
+    margin: auto;
+    color: #000000;
+}
+
+/* Sección de Juegos */
+.games-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.games-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.game-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.game-card h3 {
+    font-size: 20px;
+}
+
+.game-card p {
+    font-size: 14px;
+}
+
+.game-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #6BBF77;
+    text-decoration: none;
+}
+
+.game-card a:hover {
+    text-decoration: underline;
+}
+
+/* Sección de Características */
+.features-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.features-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.features-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+}
+
+.feature-card p {
+    font-size: 14px;
+}
+
+.feature-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #6BBF77;
+    text-decoration: none;
+}
+
+.feature-card a:hover {
+    text-decoration: underline;
+}
+
+/* Sección Extra Info */
+.extra-info {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* Sección foro*/
+.forum-section{
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 12px;
+}
+.botton{
+    background-color: #3ba04a;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 40px auto;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1rem;
+}
+/* Foro y Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #6BBF77;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu a {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    /* Ajustes en la visualización de las tarjetas */
+    .game-card, .feature-card {
+        width: 100%;
+    }
+
+    .game-cards, .features-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .games-section, .features-section {
+        width: 100%;
+    }
+}
