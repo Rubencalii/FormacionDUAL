@@ -5,21 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peaky Blinders - Fanpage</title>
     <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
 </head>
 <body>
     <!-- Barra de navegación -->
     <header>
         <nav>
             <div class="logo">
-                <img src="./img/logo.png" alt="">
+                <img src="./img/logo.png" alt="Logo Peaky Blinders">
             </div>
-            <ul class="menu">
+            <!-- Icono del menú hamburguesa -->
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <!-- Menú -->
+            <ul class="menu" id="menu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#descripcion">Descripción</a></li>
                 <li><a href="#video">Trailer</a></li>
                 <li><a href="#avances">Avances</a></li>
                 <li><a href="#temporadas">Temporadas</a></li>
-                <li><a href="#elenco">Elenco</a></li>
+                <li><a href="#elenco">Personajes</a></li>
             </ul>
         </nav>
     </header>
@@ -36,19 +44,15 @@
     <!-- Sección de descripción -->
     <section id="descripcion" class="descripcion">
         <h2>Sobre la serie</h2>
-        <p>Peaky Blinders es una serie británica de drama histórico creada por Steven Knight. Ambientada en la ciudad de Birmingham, Inglaterra, después de la Primera Guerra Mundial, la serie sigue a la familia Shelby, una familia criminal que, a lo largo de los años, lucha por expandir su imperio. Enfrentándose a rivales tanto locales como internacionales, los Shelby se ven atrapados en un mundo peligroso lleno de traiciones, alianzas y asesinatos.</p>
-        
+        <p>Peaky Blinders es una serie británica de drama histórico...</p>
         <h3>¿Por qué ver Peaky Blinders?</h3>
         <ul>
-            <li>Un guion cautivador que te atrapará desde el primer minuto.</li>
-            <li>Personajes complejos con una gran evolución durante las temporadas.</li>
-            <li>Ambientes visualmente impactantes y bien logrados.</li>
-            <li>Una banda sonora increíble que combina música moderna con clásicos.</li>
+            <li>Un guion cautivador...</li>
+            <li>Personajes complejos...</li>
         </ul>
     </section>
 
     <!-- Sección de video o trailer -->
-
     <section id="video" class="video-container">
         <h3>Trailer Oficial</h3>
         <div class="video-wrapper">
@@ -56,8 +60,6 @@
         </div>
     </section>
     
-    
-
     <!-- Sección de avances -->
     <section id="avances" class="seccion-adicional">
         <h3>Avances de la serie</h3>
@@ -73,10 +75,6 @@
             <iframe src="./video/Peaky Blinders -  Season 3 _ official trailer (2016) Netflix.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h4>Avance de la Temporada 3</h4>
         </div>
-        <div class="item">
-            <iframe src="./video/Peaky Blinders_ Season 4 Trailer.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h4>Avance de la Temporada 4</h4>
-        </div>
     </section>
 
     <!-- Sección de temporadas -->
@@ -85,43 +83,41 @@
         <div class="item">
             <img src="./img/83b27869-9ea2-4e62-a43d-378867dd325a_16-9-aspect-ratio_default_0.png" alt="">
             <h4>Temporada 1</h4>
-            <p>En la primera temporada, conocemos a la familia Shelby y su ascenso al poder en los años 20, con la figura central de Thomas Shelby liderando el imperio de apuestas ilegales.</p>
+            <p>En la primera temporada, conocemos a la familia Shelby y su ascenso al poder...</p>
         </div>
         <div class="item">
             <img src="./img/SEASON2.png" alt="">
             <h4>Temporada 2</h4>
-            <p>La familia Shelby enfrenta nuevos desafíos, expandiendo su imperio más allá de Birmingham mientras lidian con poderosas figuras criminales y gobiernos.</p>
+            <p>La familia Shelby enfrenta nuevos desafíos...</p>
         </div>
         <div class="item">
             <img src="./img/SEASON3.png" alt="">
             <h4>Temporada 3</h4>
-            <p>La familia se enfrenta a nuevos enemigos y alianzas, mientras buscan consolidar su control sobre las industrias ilegales de Europa.</p>
+            <p>La familia se enfrenta a nuevos enemigos...</p>
         </div>
     </section>
     
-    <!-- Sección de elenco -->
-
+    <!-- Sección de Personajes -->
     <section id="elenco" class="seccion-adicional">
         <h3>Personajes Principales</h3>
         <div class="item">
             <img src="./img/Cillian Murphy - Thomas Shelby.PNG" alt="">
             <h4>Cillian Murphy - Thomas Shelby</h4>
-            <p>Thomas Shelby es el líder de los Peaky Blinders, un hombre astuto y ambicioso que lucha por proteger a su familia mientras expande su imperio.</p>
+            <p>Thomas Shelby es el líder de los Peaky Blinders...</p>
         </div>
         <div class="item">
             <img src="./img/Helen McCrory - Polly Gray.png" alt="">
             <h4>Helen McCrory - Polly Gray</h4>
-            <p>Polly Gray es la matriarca de la familia Shelby, quien actúa como la mano derecha de Tommy, jugando un papel clave en las decisiones estratégicas.</p>
+            <p>Polly Gray es la matriarca de la familia Shelby...</p>
         </div>
         <div class="item">
             <img src="./img/Paul Anderson - Arthur Shelby.png" alt="">
             <h4>Paul Anderson - Arthur Shelby</h4>
-            <p>Arthur Shelby es el hermano mayor de Tommy y, aunque es violento y con un temperamento explosivo, su lealtad hacia la familia nunca está en duda.</p>
+            <p>Arthur Shelby es el hermano mayor de Tommy...</p>
         </div>
     </section>
     
-
-    <!-- Pie de página -->
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Peaky Blinders Fanpage. Todos los derechos reservados.</p>
     </footer>
