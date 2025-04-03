@@ -1,0 +1,3 @@
+Buenas German, hoy he estado haciendo una pagina con la tematica de la serie de Los Peaky Blinders, donde he estado utilizando html y css, ademas
+he estado utilizando un poco de java script para seguir practicando y utilizando el responsive para el menu de mi pagina, por otro lado he seguido viendo
+videos de html y css. 
