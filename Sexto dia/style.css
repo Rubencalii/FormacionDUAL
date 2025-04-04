@@ -223,3 +223,57 @@ footer .footer-links a {
     color: white;
     text-decoration: none;
 }
+/* Media Queries para hacer la página responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .links-container a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .sidebar {
+        width: 60px;
+        padding-top: 20px;
+    }
+
+    .caracteristicas {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+
+    .juegos-container {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    .video iframe {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo h1 {
+        font-size: 24px;
+    }
+
+    .titulo p {
+        font-size: 16px;
+    }
+
+    .caracteristicas {
+        padding: 20px;
+    }
+
+    .juegos-container {
+        padding: 20px;
+    }
+
+    .juego-item img {
+        height: 150px;
+    }
+}
