@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Riot Games Fan Page</title>
   <link rel="icon" href="./img/logo.png">
-
+  <link rel="stylesheet" href="java.js">
   <!-- AOS para animaciones -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
@@ -271,6 +271,57 @@
         font-size: 2.2em;
       }
     }
+    /* Menú hamburguesa */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin: auto 15px;
+  }
+
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+  }
+
+  /* Menú de navegación en dispositivos móviles */
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #111;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+
+    nav a:hover {
+      color: #ff4655;
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
+  }
+
+  /* Mostrar el menú cuando se hace clic en el botón hamburguesa */
+  .menu-active {
+    display: flex !important;
+  }
+
   </style>
 </head>
 <body>
@@ -278,18 +329,29 @@
 <!-- HEADER -->
 <header>
   <div class="logo"><img src="./img/logo.png" alt=""></div>
-  <nav>
+  
+  <!-- Botón hamburguesa para móviles -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <!-- Menú de navegación -->
+  <nav id="nav-menu">
     <a href="#lol">LoL</a>
     <a href="#valorant">Valorant</a>
     <a href="#tft">TFT</a>
     <a href="#galeria">Galería</a>
     <a href="#contacto">Contacto</a>
   </nav>
+
   <div class="search-container">
     <input type="text" placeholder="Buscar...">
     <span class="lupa">🔍</span>
   </div>
 </header>
+
 
 <!-- HERO -->
 <section class="hero" data-aos="fade-up">
