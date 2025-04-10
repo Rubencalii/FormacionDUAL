@@ -8,7 +8,270 @@
 
   <!-- AOS para animaciones -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e0e;
+      color: white;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+    header {
+      background: url('./img/fondo.jpg');
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #ff4655;
+    }
+
+    .logo {
+      color: #ff4655;
+      font-weight: bold;
+    }
+    .logo img{
+        width: 20%;
+    }
+    nav {
+    font-size: 1.4rem;
+    display: flex;
+    gap: 25%;
+}
+
+    nav a:hover {
+      color: #ff4655;
+    }
+
+    .search-container {
+      position: relative;
+    }
+
+    .search-container input {
+      padding: 8px 30px 8px 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .search-container .lupa {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #ffffff;
+    }
+
+    /* HERO */
+    .hero {
+      background: url(./img/fondo\ head.jpg) center/cover no-repeat; 
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 6px black;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    /* SECCIONES DE JUEGOS */
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: #111;
+    }
+
+    .games-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .game-card {
+      background-color: #111;
+      width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      position: relative;
+      text-align: left;
+      margin-bottom: 30px;
+      transform: translateY(0);
+    }
+
+    .game-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+    }
+
+    .game-card img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .game-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .game-info {
+      padding: 20px;
+      background: #111;
+      text-align: center;
+    }
+
+    .game-info h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .game-info p {
+      font-size: 16px;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .game-info button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .game-info button:hover {
+      background-color: #0056b3;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: #ffffff;
+    }
+
+    /* GALERÍA */
+    .gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 20px 0;
+      scroll-snap-type: x mandatory;
+    }
+
+    .gallery img {
+      height: 200px;
+      border-radius: 10px;
+      scroll-snap-align: start;
+      box-shadow: 0 0 10px #ff4655;
+      transition: transform 0.3s;
+      background-position: center;
+      background-size: cover;
+    }
+    #valorant img{
+        width: 50%;
+    }
+    #lol img{
+        width: 60%;
+        height: 30%;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* FORMULARIO */
+    .formulario {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255,70,85,0.3);
+    }
+
+    .formulario label {
+      display: block;
+      margin: 15px 0 5px;
+    }
+
+    .formulario input, .formulario textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .formulario button {
+      margin-top: 20px;
+      background-color: #ff4655;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .formulario button:hover {
+      background-color: #e23e4f;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #111;
+      padding: 30px 40px;
+      text-align: center;
+      color: #ffffff;
+      margin-top: 40px;
+      border-top: 2px solid #ff4655;
+    }
+    footer img{
+        width: 2%;
+        margin: 15px auto;
+    }
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .game {
+        flex-direction: column;
+      }
+      .hero h1 {
+        font-size: 2.2em;
+      }
+    }
+  </style>
 </head>
 <body>
 
