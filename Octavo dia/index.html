@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnología del Futuro</title>
+    <link rel="icon" href="./biotech_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png">
+    <style>
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    position: relative;
+    background-image: url('https://th.bing.com/th/id/OIP.kcg4QFBuQeBhRkTktGnQDQHaE7?w=230&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    animation: fadeInUp 2s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #00b4d8, #005f73);
+    color: #fff;
+    text-align: center;
+    margin: 9px auto;
+}
+
+.welcome-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+/* Estilo para la sección Impacto de la Tecnología */
+.impact-section {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #00b4d8, #005f73);
+    margin: 0 auto 15px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin: 50px auto;
+}
+
+.section-content {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: #000000;
+    margin: 120px;
+}
+
+/* Estilo para los feature boxes */
+.feature-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-right: 20px;
+}
+
+.feature-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.feature-box p {
+    font-size: 1.1rem;
+    color: #000000;
+    padding: 15px;
+    margin: 15px;
+}
+
+/* Estilo general para la sección de Innovaciones Futuras */
+.future-tech-section {
+    padding: 60px 30px;
+    background-color: #222222;
+    color: white;
+    font-family: 'Verdana', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.future-tech-section .section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    text-transform: uppercase;
+}
+
+.future-tech-section .section-content {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+/* Estilo para los feature boxes de Innovaciones Futuras */
+.future-tech-section .feature-box {
+    display: flex;
+    align-items: center;
+    background-color: #333333;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.future-tech-section .feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.future-tech-section .feature-icon {
+    font-size: 3.5rem;
+    margin-right: 20px;
+    color: #ffcc00;
+}
+
+.future-tech-section .feature-box h3 {
+    font-size: 1.7rem;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.future-tech-section .feature-box p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Estilo general para la sección de Beneficios de la Tecnología */
+.benefits-section {
+    padding: 50px 30px;
+    background-color: #313131;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los feature boxes de Beneficios */
+.benefits-section .feature-box {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefits-section .feature-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-section .feature-icon {
+    font-size: 3.5rem;
+    margin-right: 20px;
+    color: #00b894; /* Verde brillante para los iconos */
+}
+
+.benefits-section .feature-box h3 {
+    font-size: 1.8rem;
+    color: #008cba; /* Azul brillante para los títulos */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.benefits-section .feature-box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .welcome-section h2 {
+        font-size: 2rem;
+    }
+
+    .feature-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .future-tech-section .section-title {
+        font-size: 2.4rem;
+    }
+
+    .benefits-section .feature-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .feature-icon {
+        margin-bottom: 15px;
+        font-size: 4rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .section-content {
+        font-size: 1.1rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Innovación y Futuro</h1>
+    </header>
+
+    <section class="welcome-section">
+        <h2>Bienvenido al Futuro</h2>
+        <p>Explora lo último en tecnología avanzada: Inteligencia Artificial, Robótica, Realidad Aumentada y más.</p>
+    </section>
+
+    <!-- Sección de Impacto de la Tecnología -->
+    <section class="section impact-section">
+        <h2 class="section-title">El Impacto de la Tecnología en la Vida Cotidiana</h2>
+        <p class="section-content">
+            La tecnología ha cambiado radicalmente la forma en que vivimos, trabajamos y nos relacionamos. Desde la inteligencia artificial que mejora la toma de decisiones hasta los dispositivos de realidad aumentada que fusionan el mundo digital con el físico, las posibilidades son infinitas. A medida que la tecnología avanza, transformamos nuestra vida diaria, haciendo tareas más fáciles, rápidas y accesibles.
+        </p>
+        <div class="feature-box">
+            <div class="feature-icon">🤖</div>
+            <h3>Inteligencia Artificial</h3>
+            <p>Desde asistentes personales hasta soluciones avanzadas para sectores como la salud y la educación, la IA está cada vez más presente en nuestras vidas.</p>
+        </div>
+        <div class="feature-box">
+            <div class="feature-icon">🌐</div>
+            <h3>Conectividad Global</h3>
+            <p>Las redes sociales, aplicaciones de mensajería y plataformas de videoconferencia nos permiten estar más conectados que nunca, independientemente de la distancia.</p>
+        </div>
+    </section>
+
+    <!-- Innovaciones Futuras -->
+    <section class="section future-tech-section">
+        <h2 class="section-title">Innovaciones Futuras</h2>
+        <p class="section-content">
+            Las innovaciones tecnológicas están moldeando el futuro de maneras que antes solo imaginábamos en películas de ciencia ficción. Con avances como la computación cuántica y las interfaces cerebro-computadora, el panorama está cambiando rápidamente, ofreciendo nuevas oportunidades en áreas como la salud, la educación y la productividad.
+        </p>
+        <div class="feature-box">
+            <div class="feature-icon">⚛️</div>
+            <h3>Computación Cuántica</h3>
+            <p>Un campo emergente que promete revolucionar el procesamiento de información, haciendo posible cálculos que son impensables con la computación tradicional.</p>
+        </div>
+        <div class="feature-box">
+            <div class="feature-icon">🧠</div>
+            <h3>Interfaces Cerebro-Computadora</h3>
+            <p>El futuro de la comunicación entre humanos y máquinas podría pasar por conectar directamente el cerebro a sistemas digitales, permitiendo una interacción sin precedentes.</p>
+        </div>
+    </section>
+
+    <!-- Historia de la Tecnología -->
+    <section class="section history-section">
+        <h2 class="section-title">La Historia de la Tecnología</h2>
+        <p class="section-content">
+            La humanidad ha recorrido un largo camino en términos de avances tecnológicos. Desde la invención de la rueda hasta la creación de la primera computadora, cada hito ha sido un paso hacia un futuro mejor. Los avances más recientes, como la inteligencia artificial y las tecnologías de blockchain, están llevando nuestra sociedad a nuevas alturas.
+        </p>
+        <div class="feature-box">
+            <div class="feature-icon">⚙️</div>
+            <h3>Revolución Industrial</h3>
+            <p>La mecanización de procesos y la invención de la máquina a vapor marcaron el inicio de una era de innovación sin precedentes.</p>
+        </div>
+        <div class="feature-box">
+            <div class="feature-icon">💻</div>
+            <h3>La Era Digital</h3>
+            <p>El nacimiento de las computadoras personales y el acceso generalizado a Internet transformaron la sociedad, permitiendo un acceso instantáneo a la información.</p>
+        </div>
+    
+    </section>
+
+    <!-- Beneficios de la Tecnología -->
+    <section class="section benefits-section">
+        <h2 class="section-title">Beneficios de la Tecnología</h2>
+        <p class="section-content">
+            La tecnología ha aportado innumerables beneficios a la humanidad, mejorando nuestra calidad de vida. Desde avances médicos que salvan vidas hasta herramientas que nos permiten ser más productivos en el trabajo, la tecnología es un factor clave para resolver muchos de los desafíos que enfrenta la sociedad actual.
+        </p>
+        <div class="feature-box">
+            <div class="feature-icon">💉</div>
+            <h3>Avances Médicos</h3>
+            <p>Desde diagnósticos más rápidos hasta tratamientos personalizados, la tecnología ha mejorado la atención médica y prolongado la esperanza de vida.</p>
+        </div>
+        <div class="feature-box">
+            <div class="feature-icon">📚</div>
+            <h3>Educación y Conocimiento</h3>
+            <p>Las plataformas en línea y las herramientas interactivas están transformando la manera en que aprendemos y accedemos a la educación.</p>
+        </div>
+
+    <footer>
+        <p>&copy; 2025 Innovación y Futuro. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
