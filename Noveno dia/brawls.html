@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería de Brawlers - Brawl Stars</title>
     <style>
-        /* Estilo base */
         body {
-            font-family: 'Press Start 2P', cursive, sans-serif; /* Fuente inspirada en Brawl Stars */
+            font-family: 'Press Start 2P', cursive, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
             color: #333;
-            overflow-x: hidden;
         }
         header {
-            background-color: #a09d00;
+            background-color: #febe20;
             color: white;
             padding: 30px;
             text-align: center;
@@ -35,19 +32,33 @@
             font-size: 1.1em;
         }
         nav a:hover {
-            background-color: #a09d00;
+            background-color: #febe20;
             border-radius: 5px;
         }
         section {
             padding: 40px;
             text-align: center;
         }
+        .filters {
+            margin-bottom: 20px;
+        }
+        .filters button {
+            background-color: #febe20;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 8px;
+        }
+        .filters button:hover {
+            background-color: #febe20;
+        }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 30px;
-            padding: 20px;
-            margin-top: 30px;
         }
         .brawler-card {
             background-color: #fff;
@@ -55,124 +66,168 @@
             border-radius: 15px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transform: scale(0.95);
-            opacity: 0;
-            animation: fadeInUp 0.6s forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .brawler-card img {
             width: 100%;
             height: auto;
             border-radius: 15px;
-            transition: transform 0.3s ease;
         }
-        .brawler-card:hover img {
-            transform: scale(1.1);
-        }
-        .brawler-card h3 {
-            margin-top: 15px;
-            font-size: 1.5em;
-            color: #a09d00;
-            font-weight: bold;
-        }
-        .brawler-card p {
-            font-size: 1em;
-            color: #555;
-            margin-top: 10px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            font-size: 1.1em;
-        }
-
-        /* Animación de entrada */
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Efecto de hover en las tarjetas */
         .brawler-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
         }
+        .brawler-card h3 {
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: #febe20;
+        }
+        .news {
+            background: #fff3cd;
+            color: #856404;
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 800px;
+            border: 1px solid #ffeeba;
+            border-radius: 10px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            text-align: left;
+        }
+        .modal-close {
+            float: right;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .search-box {
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
     </style>
-
-    <!-- Agregamos una fuente inspirada en Brawl Stars -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Galería de Brawlers - Brawl Stars</h1>
         <p>Conoce a todos los personajes del emocionante juego Brawl Stars</p>
-    </header>
+    </header><nav>
+    <a href="#general">¿Qué es Brawl Stars?</a>
+    <a href="#galeria">Galería de Brawlers</a>
+    <a href="#modos">Modos de Juego</a>
+</nav>
 
-    <nav>
-        <a href="#general">¿Qué es Brawl Stars?</a>
-        <a href="#galeria">Galería de Brawlers</a>
-        <a href="#modos">Modos de Juego</a>
-    </nav>
+<section id="general">
+    <h2>¿Qué es Brawl Stars?</h2>
+    <p>Brawl Stars es un juego multijugador en línea desarrollado por Supercell. Es un juego de acción donde los jugadores participan en combates rápidos en diferentes modos de juego.</p>
+</section>
 
-    <section id="general">
-        <h2>¿Qué es Brawl Stars?</h2>
-        <p>Brawl Stars es un juego multijugador en línea desarrollado por Supercell. Es un juego de acción donde los jugadores participan en combates rápidos en diferentes modos de juego. El objetivo es derrotar a los enemigos y lograr diversos objetivos según el modo de juego seleccionado.</p>
-    </section>
+<section class="news">
+    <h3>Noticias recientes</h3>
+    <p><strong>¡Nuevo brawler disponible!</strong> Conoce a Chuck, el maquinista del tren. Ya está disponible en el juego.</p>
+    <p><strong>Evento especial:</strong> ¡Este fin de semana, doble de recompensas en Showdown!</p>
+</section>
 
-    <section id="galeria">
-        <h2>Galería de Brawlers</h2>
-        <div class="gallery">
-            <div class="brawler-card">
-                <img src="images/shelly.png" alt="Shelly">
-                <h3>Shelly</h3>
-                <p>Una de las brawlers más populares. Su arma es una escopeta de corto alcance.</p>
-            </div>
-            <div class="brawler-card">
-                <img src="images/colt.png" alt="Colt">
-                <h3>Colt</h3>
-                <p>Un brawler con dos pistolas, perfecto para atacar a larga distancia.</p>
-            </div>
-            <div class="brawler-card">
-                <img src="images/el_primo.png" alt="El Primo">
-                <h3>El Primo</h3>
-                <p>Un luchador de cuerpo a cuerpo que utiliza su fuerza para lanzar a sus enemigos.</p>
-            </div>
-            <div class="brawler-card">
-                <img src="images/barley.png" alt="Barley">
-                <h3>Barley</h3>
-                <p>Un brawler que lanza botellas de fuego, ideal para el control de área.</p>
-            </div>
-            <div class="brawler-card">
-                <img src="images/poco.png" alt="Poco">
-                <h3>Poco</h3>
-                <p>Un brawler con habilidades de soporte, ideal para sanar a su equipo.</p>
-            </div>
-            <div class="brawler-card">
-                <img src="images/daryl.png" alt="Daryl">
-                <h3>Daryl</h3>
-                <p>Un brawler con un cañón de doble cañón, y una habilidad para rodar y evitar daños.</p>
-            </div>
-            <!-- Agrega más brawlers aquí -->
+<section id="galeria">
+    <h2>Galería de Brawlers</h2>
+    <div class="search-box">
+        <input type="text" id="searchInput" onkeyup="searchBrawlers()" placeholder="Buscar brawler...">
+    </div>
+    <div class="filters">
+        <button onclick="filterBrawlers('todos')">Todos</button>
+        <button onclick="filterBrawlers('tanque')">Tanques</button>
+        <button onclick="filterBrawlers('apoyo')">Apoyo</button>
+        <button onclick="filterBrawlers('luchador')">Luchadores</button>
+        <button onclick="filterBrawlers('francotirador')">Francotiradores</button>
+    </div>
+    <div class="gallery">
+        <div class="brawler-card" data-tipo="luchador" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+            <img src="images/shelly.png" alt="Shelly">
+            <h3>Shelly</h3>
         </div>
-    </section>
+        <div class="brawler-card" data-tipo="francotirador" data-nombre="colt" onclick="showModal('Colt', 'Pistolas duales. Su súper atraviesa enemigos y estructuras.')">
+            <img src="images/colt.png" alt="Colt">
+            <h3>Colt</h3>
+        </div>
+        <div class="brawler-card" data-tipo="tanque" data-nombre="el primo" onclick="showModal('El Primo', 'Luchador de corto alcance con mucha salud. Su súper es un salto aéreo.')">
+            <img src="images/el_primo.png" alt="El Primo">
+            <h3>El Primo</h3>
+        </div>
+        <div class="brawler-card" data-tipo="apoyo" data-nombre="poco" onclick="showModal('Poco', 'Dispara ondas sónicas. Puede curar aliados con su súper.')">
+            <img src="images/poco.png" alt="Poco">
+            <h3>Poco</h3>
+        </div>
+    </div>
+</section>
 
-    <section id="modos">
-        <h2>Modos de Juego</h2>
-        <ul>
-            <li><strong>Brawl Ball:</strong> Un modo donde los equipos deben intentar meter un balón en la portería del equipo contrario.</li>
-            <li><strong>Gem Grab:</strong> Los jugadores deben recolectar gemas mientras protegen a su equipo y luchan contra los rivales.</li>
-            <li><strong>Showdown:</strong> Un modo de supervivencia en solitario o en equipos donde los jugadores compiten hasta ser el último en pie.</li>
-        </ul>
-    </section>
+<div class="modal" id="brawlerModal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalText"></p>
+    </div>
+</div>
 
-    <footer>
-        <p>&copy; 2025 Brawl Stars Fansite</p>
-    </footer>
+<section id="modos">
+    <h2>Modos de Juego</h2>
+    <ul>
+        <li><strong>Brawl Ball:</strong> Anota goles con tu equipo.</li>
+        <li><strong>Gem Grab:</strong> Captura y guarda gemas.</li>
+        <li><strong>Showdown:</strong> Sobrevive en solitario o con compañero.</li>
+        <li><strong>Hot Zone:</strong> Controla zonas específicas en el mapa.</li>
+    </ul>
+</section>
+
+<script>
+    function filterBrawlers(tipo) {
+        const cards = document.querySelectorAll('.brawler-card');
+        cards.forEach(card => {
+            if (tipo === 'todos' || card.dataset.tipo === tipo) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    function showModal(nombre, descripcion) {
+        document.getElementById('modalTitle').innerText = nombre;
+        document.getElementById('modalText').innerText = descripcion;
+        document.getElementById('brawlerModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+        document.getElementById('brawlerModal').style.display = 'none';
+    }
+
+    function searchBrawlers() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const cards = document.querySelectorAll('.brawler-card');
+        cards.forEach(card => {
+            const nombre = card.dataset.nombre;
+            card.style.display = nombre.includes(input) ? 'block' : 'none';
+        });
+    }
+</script>
+
 </body>
 </html>
