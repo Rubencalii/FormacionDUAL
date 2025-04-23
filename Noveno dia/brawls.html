@@ -123,12 +123,46 @@
             border-radius: 8px;
             border: 1px solid #ccc;
         }
+        #modos {
+        background-color: #2c2f33;
+        width: 90%;
+        color: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        margin: 40px auto;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        #modos h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #ffcc00;
+        }
+
+        #modos ul {
+        list-style-type: none;
+        padding: 0;
+        }
+
+        #modos li {
+        background-color: #3a3f47;
+        margin-bottom: 10px;
+        padding: 15px;
+        border-radius: 8px;
+        transition: transform 0.2s ease;
+        }
+
+        #modos li:hover {
+        transform: scale(1.03);
+        background-color: #505762;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Galería de Brawlers - Brawl Stars</h1>
+        <h1>Brawl Stars</h1>
         <p>Conoce a todos los personajes del emocionante juego Brawl Stars</p>
     </header><nav>
     <a href="#general">¿Qué es Brawl Stars?</a>
@@ -138,14 +172,35 @@
 
 <section id="general">
     <h2>¿Qué es Brawl Stars?</h2>
-    <p>Brawl Stars es un juego multijugador en línea desarrollado por Supercell. Es un juego de acción donde los jugadores participan en combates rápidos en diferentes modos de juego.</p>
+    <p>Brawl Stars es un juego multijugador en línea para dispositivos móviles (Android e iOS), desarrollado por Supercell y lanzado globalmente en diciembre de 2018. Se caracteriza por combates rápidos y dinámicos en los que los jugadores controlan a los llamados Brawlers, personajes con habilidades y estilos de juego únicos.​.</p>
 </section>
 
 <section class="news">
     <h3>Noticias recientes</h3>
-    <p><strong>¡Nuevo brawler disponible!</strong> Conoce a Chuck, el maquinista del tren. Ya está disponible en el juego.</p>
-    <p><strong>Evento especial:</strong> ¡Este fin de semana, doble de recompensas en Showdown!</p>
-</section>
+    <div id="news-container">
+    </div>
+  </section>
+  
+  <script>
+    const noticias = [
+      {
+        titulo: "¡Nuevo brawler disponible!",
+        contenido: "Conoce a Kenji,  Con una estética inspirada en la cultura japonesa y una historia que lo presenta como un exninja convertido en chef de sushi en Starr Park Ya está disponible en el juego."
+      },
+      {
+        titulo: "Evento especial:",
+        contenido: "¡Este fin de semana, doble de recompensas en Showdown!"
+      }
+    ];
+  
+    const newsContainer = document.getElementById("news-container");
+  
+    noticias.forEach(noticia => {
+      const p = document.createElement("p");
+      p.innerHTML = `<strong>${noticia.titulo}</strong> ${noticia.contenido}`;
+      newsContainer.appendChild(p);
+    });
+  </script>
 
 <section id="galeria">
     <h2>Galería de Brawlers</h2>
@@ -158,8 +213,29 @@
         <button onclick="filterBrawlers('apoyo')">Apoyo</button>
         <button onclick="filterBrawlers('luchador')">Luchadores</button>
         <button onclick="filterBrawlers('francotirador')">Francotiradores</button>
+        <button onclick="filterBrawlers('asesino')">Asesino</button>
     </div>
     <div class="gallery">
+        <div class="brawler-card" data-tipo="asesino" data-nombre="Kenji" onclick="showModal('Con una estética inspirada en la cultura japonesa y una historia que lo presenta como un exninja convertido en chef de sushi')">
+            <img src="images/shelly.png" alt="">
+            <h3>Kenja</h3>
+        </div>
+        <div class="brawler-card" data-tipo="luchador" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+            <img src="images/shelly.png" alt="Shelly">
+            <h3>Shelly</h3>
+        </div>
+        <div class="brawler-card" data-tipo="luchador" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+            <img src="images/shelly.png" alt="Shelly">
+            <h3>Shelly</h3>
+        </div>
+        <div class="brawler-card" data-tipo="luchador" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+            <img src="images/shelly.png" alt="Shelly">
+            <h3>Shelly</h3>
+        </div>
+        <div class="brawler-card" data-tipo="luchador" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+            <img src="images/shelly.png" alt="Shelly">
+            <h3>Shelly</h3>
+        </div>
         <div class="brawler-card" data-tipo="luchador" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="images/shelly.png" alt="Shelly">
             <h3>Shelly</h3>
@@ -190,12 +266,17 @@
 <section id="modos">
     <h2>Modos de Juego</h2>
     <ul>
-        <li><strong>Brawl Ball:</strong> Anota goles con tu equipo.</li>
-        <li><strong>Gem Grab:</strong> Captura y guarda gemas.</li>
-        <li><strong>Showdown:</strong> Sobrevive en solitario o con compañero.</li>
-        <li><strong>Hot Zone:</strong> Controla zonas específicas en el mapa.</li>
+      <li><strong>Brawl Ball:</strong> Anota goles con tu equipo.</li>
+      <li><strong>Gem Grab:</strong> Captura y guarda gemas.</li>
+      <li><strong>Showdown:</strong> Sobrevive en solitario o con compañero.</li>
+      <li><strong>Hot Zone:</strong> Controla zonas específicas en el mapa.</li>
+      <li><strong>Knockout:</strong> Elimina al equipo rival en rondas sin reaparición.</li>
+      <li><strong>Heist:</strong> Protege tu caja fuerte y destruye la del enemigo.</li>
+      <li><strong>Bounty:</strong> Gana puntos eliminando enemigos sin que te derroten.</li>
+      <li><strong>Duel:</strong> Batallas 1v1 en formato de 3 brawlers por jugador.</li>
+      <li><strong>Payload:</strong> Acompaña tu carrito y evita que avance el del enemigo.</li>
     </ul>
-</section>
+  </section>
 
 <script>
     function filterBrawlers(tipo) {
