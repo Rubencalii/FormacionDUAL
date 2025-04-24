@@ -140,25 +140,40 @@
         color: #ffcc00;
         }
 
-        #modos ul {
-        list-style-type: none;
-        padding: 0;
+        .accordion {
+            background-color: #f1f1f1;
+            color: #444;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .accordion:hover {
+            background-color: #ddd;
+        }
+        .active, .accordion:focus {
+            background-color: #ccc;
+        }
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: #f9f9f9;
+            overflow: hidden;
+        }
+        .panel img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 10px;
         }
 
-        #modos li {
-        background-color: #3a3f47;
-        margin-bottom: 10px;
-        padding: 15px;
-        border-radius: 8px;
-        transition: transform 0.2s ease;
-        }
-
-        #modos li:hover {
-        transform: scale(1.03);
-        background-color: #505762;
-        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" href="./brawl.jpg">
 </head>
 <body>
     <header>
@@ -181,6 +196,7 @@
     </div>
   </section>
   
+  
   <script>
     const noticias = [
       {
@@ -201,6 +217,8 @@
       newsContainer.appendChild(p);
     });
   </script>
+
+
 
 <section id="galeria">
     <h2>Galería de Brawlers</h2>
@@ -265,56 +283,79 @@
             <img src="https://static.wikia.nocookie.net/brawlstars/images/a/a1/Bibi1-pfp.png/revision/latest?cb=20220429013921" alt="Shelly">
             <h3>Bibi</h3>
         </div>
-        <div class="brawler-card" data-tipo="francotirador" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card" data-tipo="francotirador" data-nombre="Mr.P" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/1/19/Mr._P1-pfp.png/revision/latest?cb=20220429014441" alt="Shelly">
             <h3>Mr.P</h3>
         </div>
-        <div class="brawler-card" data-tipo="francotirador" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card" data-tipo="francotirador" data-nombre="Rico" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/7/7e/Rico1-pfp.png/revision/latest?cb=20220429011633" alt="Shelly">
             <h3>Rico</h3>
         </div>
-        <div class="brawler-card" data-tipo="asesino" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card" data-tipo="asesino" data-nombre="Mortis" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/1/14/Mortis1-pfp.png/revision/latest?cb=20250301030807" alt="Shelly">
             <h3>Mortis</h3>
         </div>
-        <div class="brawler-card" data-tipo="asesino" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card" data-tipo="asesino" data-nombre="Eve" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/0/02/Eve1-pfp.png/revision/latest?cb=20231002062109" alt="Shelly">
             <h3>Eve</h3>
         </div>
-        <div class="brawler-card" data-tipo="apoyo" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card" data-tipo="apoyo" data-nombre="Nita" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/0/01/Nita1-pfp.webp/revision/latest?cb=20231215160623&path-prefix=es" alt="Shelly">
             <h3>Nita</h3>
         </div>
-        <div class="brawler-card" data-tipo="asesino" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card" data-tipo="asesino" data-nombre="Mico" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/f/f4/Mico1-pfp.png/revision/latest?cb=20231224210800" alt="Shelly">
             <h3>Mico</h3>
         </div>
-        <div class="brawler-card" data-tipo="francotirador" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card" data-tipo="francotirador" data-nombre="Squeak" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/b/bb/Squeak1-pfp.png/revision/latest?cb=20220429014621" alt="Shelly">
             <h3>Squeak</h3>
         </div>
-        <div class="brawler-card" data-tipo="luchador" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card" data-tipo="luchador" data-nombre="Shade" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/9/95/Shade-pfp.png/revision/latest?cb=20241030195220&path-prefix=es" alt="Shelly">
             <h3>Shade</h3>
         </div>
-        <div class="brawler-card" data-tipo="lanzador" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card" data-tipo="lanzador" data-nombre="Willow" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/b/b7/Willow1-pfp.webp/revision/latest?cb=20231217164656&path-prefix=es" alt="Shelly">
             <h3>Willow</h3>
         </div>
-        <div class="brawler-card" data-tipo="lanzador" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card" data-tipo="lanzador" data-nombre="Juju" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/9/9e/Juju-pfp.png/revision/latest?cb=20241030194758&path-prefix=es" alt="Shelly">
             <h3>Juju</h3>
         </div>
-        <div class="brawler-card" data-tipo="apoyo" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card" data-tipo="apoyo" data-nombre="Kit" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/2/23/Kit1-pfp.png/revision/latest?cb=20231224210915" alt="Shelly">
             <h3>Kit</h3>
         </div>
-        <div class="brawler-card" data-tipo="asesino" data-nombre="shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card" data-tipo="asesino" data-nombre="Chester" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/d/db/Chester1-pfp.png/revision/latest?cb=20221216064656" alt="Shelly">
             <h3>Chester</h3>
         </div>
     </div>
 </section>
+
+<script>
+    // Obtén todos los botones de acordeón
+    var accordions = document.getElementsByClassName("accordion");
+
+    // Añade un evento de clic a cada uno
+    for (var i = 0; i < accordions.length; i++) {
+        accordions[i].addEventListener("click", function() {
+            // Alterna la clase "active" para cambiar el estilo
+            this.classList.toggle("active");
+
+            // Obtén el panel correspondiente
+            var panel = this.nextElementSibling;
+
+            // Si el panel está visible, ocúltalo; si no, muéstralo
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
 
 <div class="modal" id="brawlerModal">
     <div class="modal-content">
@@ -326,50 +367,92 @@
 
 <section id="modos">
     <h2>Modos de Juego</h2>
-    <ul>
-      <li><strong>Brawl Ball:</strong> Anota goles con tu equipo.</li>
-      <li><strong>Gem Grab:</strong> Captura y guarda gemas.</li>
-      <li><strong>Showdown:</strong> Sobrevive en solitario o con compañero.</li>
-      <li><strong>Hot Zone:</strong> Controla zonas específicas en el mapa.</li>
-      <li><strong>Knockout:</strong> Elimina al equipo rival en rondas sin reaparición.</li>
-      <li><strong>Heist:</strong> Protege tu caja fuerte y destruye la del enemigo.</li>
-      <li><strong>Bounty:</strong> Gana puntos eliminando enemigos sin que te derroten.</li>
-      <li><strong>Duel:</strong> Batallas 1v1 en formato de 3 brawlers por jugador.</li>
-      <li><strong>Payload:</strong> Acompaña tu carrito y evita que avance el del enemigo.</li>
-    </ul>
-  </section>
+
+    <!-- Modo Brawl Ball -->
+    <button class="accordion">Brawl Ball</button>
+    <div class="panel">
+        <p>Anota goles con tu equipo.</p>
+        <img src="https://static.wikia.nocookie.net/brawlstars/images/7/7a/Brawl_Ball_map.jpg/revision/latest/scale-to-width-down/350?cb=20220201013001" alt="Brawl Ball">
+    </div>
+
+    <!-- Modo Gem Grab -->
+    <button class="accordion">Gem Grab</button>
+    <div class="panel">
+        <p>Captura y guarda gemas.</p>
+        <img src="https://static.wikia.nocookie.net/brawlstars/images/0/06/Gem_Grab_map.jpg/revision/latest/scale-to-width-down/350?cb=20220201013035" alt="Gem Grab">
+    </div>
+
+    <!-- Modo Showdown -->
+    <button class="accordion">Showdown</button>
+    <div class="panel">
+        <p>Sobrevive en solitario o con compañero.</p>
+        <img src="https://static.wikia.nocookie.net/brawlstars/images/d/d6/Showdown_Map.jpg/revision/latest/scale-to-width-down/350?cb=20220201013058" alt="Showdown">
+    </div>
+
+    <!-- Modo Hot Zone -->
+    <button class="accordion">Hot Zone</button>
+    <div class="panel">
+        <p>Controla zonas específicas en el mapa.</p>
+        <img src="https://static.wikia.nocookie.net/brawlstars/images/3/3d/Hot_Zone_map.jpg/revision/latest/scale-to-width-down/350?cb=20220201013119" alt="Hot Zone">
+    </div>
+
+    <!-- Modo Knockout -->
+    <button class="accordion">Knockout</button>
+    <div class="panel">
+        <p>Elimina al equipo rival en rondas sin reaparición.</p>
+        <img src="https://static.wikia.nocookie.net/brawlstars/images/0/0c/Knockout_map.jpg/revision/latest/scale-to-width-down/350?cb=20220201013146" alt="Knockout">
+    </div>
+
+    <!-- Modo Heist -->
+    <button class="accordion">Heist</button>
+    <div class="panel">
+        <p>Protege tu caja fuerte y destruye la del enemigo.</p>
+        <img src="https://static.wikia.nocookie.net/brawlstars/images/1/1d/Heist_map.jpg/revision/latest/scale-to-width-down/350?cb=20220201013212" alt="Heist">
+    </div>
+
+    <!-- Modo Bounty -->
+    <button class="accordion">Bounty</button>
+    <div class="panel">
+        <p>Gana puntos eliminando enemigos sin que te derroten.</p>
+        <img src="https://static.wikia.nocookie.net/brawlstars/images/a/a5/Bounty_map.jpg/revision/latest/scale-to-width-down/350?cb=20220201013230" alt="Bounty">
+    </div>
+
+    <!-- Modo Duel -->
+    <button class="accordion">Duel</button>
+    <div class="panel">
+        <p>Batallas 1v1 en formato de 3 brawlers por jugador.</p>
+        <img src="https://static.wikia.nocookie.net/brawlstars/images/7/71/Duel_map.jpg/revision/latest/scale-to-width-down/350?cb=20220201013251" alt="Duel">
+    </div>
+
+    <!-- Modo Payload -->
+    <button class="accordion">Payload</button>
+    <div class="panel">
+        <p>Acompaña tu carrito y evita que avance el del enemigo.</p>
+        <img src="https://static.wikia.nocookie.net/brawlstars/images/d/d3/Payload_map.jpg/revision/latest/scale-to-width-down/350?cb=20220201013312" alt="Payload">
+    </div>
+</section>
 
 <script>
-    function filterBrawlers(tipo) {
-        const cards = document.querySelectorAll('.brawler-card');
-        cards.forEach(card => {
-            if (tipo === 'todos' || card.dataset.tipo === tipo) {
-                card.style.display = 'block';
+    // Obtén todos los botones de acordeón
+    var accordions = document.getElementsByClassName("accordion");
+
+    // Añade un evento de clic a cada uno
+    for (var i = 0; i < accordions.length; i++) {
+        accordions[i].addEventListener("click", function() {
+            // Alterna la clase "active" para cambiar el estilo
+            this.classList.toggle("active");
+
+            // Obtén el panel correspondiente
+            var panel = this.nextElementSibling;
+
+            // Si el panel está visible, ocúltalo; si no, muéstralo
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
             } else {
-                card.style.display = 'none';
+                panel.style.display = "block";
             }
         });
     }
-
-    function showModal(nombre, descripcion) {
-        document.getElementById('modalTitle').innerText = nombre;
-        document.getElementById('modalText').innerText = descripcion;
-        document.getElementById('brawlerModal').style.display = 'flex';
-    }
-
-    function closeModal() {
-        document.getElementById('brawlerModal').style.display = 'none';
-    }
-
-    function searchBrawlers() {
-        const input = document.getElementById('searchInput').value.toLowerCase();
-        const cards = document.querySelectorAll('.brawler-card');
-        cards.forEach(card => {
-            const nombre = card.dataset.nombre;
-            card.style.display = nombre.includes(input) ? 'block' : 'none';
-        });
-    }
 </script>
-
 </body>
 </html>
