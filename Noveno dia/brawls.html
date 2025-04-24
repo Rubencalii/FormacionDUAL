@@ -80,7 +80,7 @@
         .brawler-card h3 {
             margin-top: 15px;
             font-size: 1.2em;
-            color: #febe20;
+            color: #000000;
         }
         .news {
             background: #fff3cd;
@@ -156,7 +156,7 @@
             background-color:  #ffcc00;
         }
         .active, .accordion:focus {
-            background-color: #ccc;
+            background-color: rgba(0, 0, 0, 0.7);
         }
         .panel {
             padding: 0 18px;
@@ -170,7 +170,30 @@
             display: block;
             margin-top: 10px;
         }
+        .legendario {
+        background-color: #f2b500;
+        color: #fff;
+        }
 
+        .mitico {
+        background-color: #fc5050;
+        color: #fff;
+        }
+
+        .epico {
+        background-color:  #8e44ad;
+        color: #fff;
+        }
+
+        .especial {
+        background-color:blue;
+        color: #fff;
+        }
+
+        .inicial {
+        background-color: #00f64a; 
+        color: #333;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="icon" href="./brawl.jpg">
@@ -238,99 +261,99 @@
     </div>
   
     <div class="gallery">
-      <div class="brawler-card" data-tipo="asesino" data-nombre="Kenji" onclick="showModal('Kenji', 'Con una estética inspirada en la cultura japonesa y una historia que lo presenta como un exninja convertido en chef de sushi.')">
+      <div class="brawler-card legendario" data-tipo="asesino" data-nombre="Kenji" onclick="showModal('Kenji', 'Con una estética inspirada en la cultura japonesa y una historia que lo presenta como un exninja convertido en chef de sushi.')">
         <img src="https://static.wikia.nocookie.net/brawlstars/images/8/87/Kenji-pfp.png/revision/latest?cb=20240830194802&path-prefix=es" alt="Kenji">
         <h3>Kenji</h3>
       </div>
-      <div class="brawler-card" data-tipo="luchador" data-nombre="Shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+      <div class="brawler-card inicial"data-tipo="luchador" data-nombre="Shelly" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
         <img src="https://static.wikia.nocookie.net/brawlstars/images/c/c9/Shelly1-pfp.webp/revision/latest?cb=20231214173051&path-prefix=es" alt="Shelly">
         <h3>Shelly</h3>
       </div>
-      <div class="brawler-card" data-tipo="tanque" data-nombre="Ollie" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+      <div class="brawler-card mitico" data-tipo="tanque" data-nombre="Ollie" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
         <img src="https://static.wikia.nocookie.net/brawlstars/images/5/57/Ollie-pfp.png/revision/latest?cb=20241212135727&path-prefix=es" alt="Shelly">
         <h3>Ollie</h3>
         </div>
-        <div class="brawler-card" data-tipo="lanzador" data-nombre="Gromp" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card epico" data-tipo="lanzador" data-nombre="Gromp" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/9/99/Grom1pfp.png/revision/latest?cb=20231123005314&path-prefix=es" alt="Shelly">
             <h3>Gromp</h3>
         </div>
-        <div class="brawler-card" data-tipo="tanque" data-nombre="Ash" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card epico" data-tipo="tanque" data-nombre="Ash" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/3/36/Ash1-pfp.webp/revision/latest?cb=20231215154300&path-prefix=es" alt="Shelly">
             <h3>Ash</h3>
         </div>
-        <div class="brawler-card" data-tipo="francotirador" data-nombre="Melodie" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card mitico" data-tipo="francotirador" data-nombre="Melodie" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/f/ff/Melodie1-pfp.png/revision/latest?cb=20240229104516" alt="Shelly">
             <h3>Melodie</h3>
         </div>
-        <div class="brawler-card" data-tipo="francotirador" data-nombre="colt" onclick="showModal('Colt', 'Pistolas duales. Su súper atraviesa enemigos y estructuras.')">
+        <div class="brawler-card inicial" data-tipo="francotirador" data-nombre="colt" onclick="showModal('Colt', 'Pistolas duales. Su súper atraviesa enemigos y estructuras.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/a/a2/Colt1-pfp.webp/revision/latest?cb=20231215182343&path-prefix=es" alt="Colt">
             <h3>Colt</h3>
         </div>
-        <div class="brawler-card" data-tipo="tanque" data-nombre="el primo" onclick="showModal('El Primo', 'Luchador de corto alcance con mucha salud. Su súper es un salto aéreo.')">
+        <div class="brawler-card especial" data-tipo="tanque" data-nombre="el primo" onclick="showModal('El Primo', 'Luchador de corto alcance con mucha salud. Su súper es un salto aéreo.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/2/23/El_Primo1-pfp.png/revision/latest?cb=20220429011308" alt="El Primo">
             <h3>El Primo</h3>
         </div>
-        <div class="brawler-card" data-tipo="apoyo" data-nombre="poco" onclick="showModal('Poco', 'Dispara ondas sónicas. Puede curar aliados con su súper.')">
+        <div class="brawler-card especial" data-tipo="apoyo" data-nombre="poco" onclick="showModal('Poco', 'Dispara ondas sónicas. Puede curar aliados con su súper.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/5/5a/Poco1-pfp.png/revision/latest?cb=20240507111121" alt="Poco">
             <h3>Poco</h3>
         </div>
-        <div class="brawler-card" data-tipo="asesino" data-nombre="Edgar" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card epico" data-tipo="asesino" data-nombre="Edgar" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/8/8d/Edgar.png/revision/latest?cb=20201220011122&path-prefix=es" alt="Shelly">
             <h3>Edgar</h3>
         </div>
-        <div class="brawler-card" data-tipo="asesino" data-nombre="Spike" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card legendario" data-tipo="asesino" data-nombre="Spike" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/9/97/Spike1-pfp.png/revision/latest?cb=20250301030317" alt="Shelly">
             <h3>Spike</h3>
         </div>
-        <div class="brawler-card" data-tipo="tanque" data-nombre="Bibi" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card epico" data-tipo="tanque" data-nombre="Bibi" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/a/a1/Bibi1-pfp.png/revision/latest?cb=20220429013921" alt="Shelly">
             <h3>Bibi</h3>
         </div>
-        <div class="brawler-card" data-tipo="francotirador" data-nombre="Mr.P" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card mitico" data-tipo="francotirador" data-nombre="Mr.P" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/1/19/Mr._P1-pfp.png/revision/latest?cb=20220429014441" alt="Shelly">
             <h3>Mr.P</h3>
         </div>
-        <div class="brawler-card" data-tipo="francotirador" data-nombre="Rico" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card inicial" data-tipo="francotirador" data-nombre="Rico" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/7/7e/Rico1-pfp.png/revision/latest?cb=20220429011633" alt="Shelly">
             <h3>Rico</h3>
         </div>
-        <div class="brawler-card" data-tipo="asesino" data-nombre="Mortis" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card epico" data-tipo="asesino" data-nombre="Mortis" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/1/14/Mortis1-pfp.png/revision/latest?cb=20250301030807" alt="Shelly">
             <h3>Mortis</h3>
         </div>
-        <div class="brawler-card" data-tipo="asesino" data-nombre="Eve" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card mitico" data-tipo="asesino" data-nombre="Eve" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/0/02/Eve1-pfp.png/revision/latest?cb=20231002062109" alt="Shelly">
             <h3>Eve</h3>
         </div>
-        <div class="brawler-card" data-tipo="apoyo" data-nombre="Nita" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card especial" data-tipo="apoyo" data-nombre="Nita" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/0/01/Nita1-pfp.webp/revision/latest?cb=20231215160623&path-prefix=es" alt="Shelly">
             <h3>Nita</h3>
         </div>
-        <div class="brawler-card" data-tipo="asesino" data-nombre="Mico" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card mitico" data-tipo="asesino" data-nombre="Mico" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/f/f4/Mico1-pfp.png/revision/latest?cb=20231224210800" alt="Shelly">
             <h3>Mico</h3>
         </div>
-        <div class="brawler-card" data-tipo="francotirador" data-nombre="Squeak" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card mitico" data-tipo="francotirador" data-nombre="Squeak" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/b/bb/Squeak1-pfp.png/revision/latest?cb=20220429014621" alt="Shelly">
             <h3>Squeak</h3>
         </div>
-        <div class="brawler-card" data-tipo="luchador" data-nombre="Shade" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card epico" data-tipo="luchador" data-nombre="Shade" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/9/95/Shade-pfp.png/revision/latest?cb=20241030195220&path-prefix=es" alt="Shelly">
             <h3>Shade</h3>
         </div>
-        <div class="brawler-card" data-tipo="lanzador" data-nombre="Willow" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card mitico" data-tipo="lanzador" data-nombre="Willow" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/b/b7/Willow1-pfp.webp/revision/latest?cb=20231217164656&path-prefix=es" alt="Shelly">
             <h3>Willow</h3>
         </div>
-        <div class="brawler-card" data-tipo="lanzador" data-nombre="Juju" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card mitico" data-tipo="lanzador" data-nombre="Juju" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/9/9e/Juju-pfp.png/revision/latest?cb=20241030194758&path-prefix=es" alt="Shelly">
             <h3>Juju</h3>
         </div>
-        <div class="brawler-card" data-tipo="apoyo" data-nombre="Kit" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card legendario" data-tipo="apoyo" data-nombre="Kit" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/2/23/Kit1-pfp.png/revision/latest?cb=20231224210915" alt="Shelly">
             <h3>Kit</h3>
         </div>
-        <div class="brawler-card" data-tipo="asesino" data-nombre="Chester" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
+        <div class="brawler-card legendario"  data-tipo="asesino" data-nombre="Chester" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
             <img src="https://static.wikia.nocookie.net/brawlstars/images/d/db/Chester1-pfp.png/revision/latest?cb=20221216064656" alt="Shelly">
             <h3>Chester</h3>
         </div>
