@@ -254,7 +254,6 @@
       <button onclick="filterBrawlers('todos')">Todos</button>
       <button onclick="filterBrawlers('tanque')">Tanques</button>
       <button onclick="filterBrawlers('apoyo')">Apoyo</button>
-      <button onclick="filterBrawlers('luchador')">Luchadores</button>
       <button onclick="filterBrawlers('lanzador')">Lanzador</button>
       <button onclick="filterBrawlers('asesino')">Asesino</button>
       <button onclick="filterBrawlers('francotirador')">Francotiradores</button>
@@ -262,101 +261,150 @@
   
     <div class="gallery">
       <div class="brawler-card legendario" data-tipo="asesino" data-nombre="Kenji" onclick="showModal('Kenji: es un brawler legendario de tipo asesino en Brawl Stars. Tiene una estética inspirada en la cultura japonesa y un estilo de juego ágil. Su ataque principal lanza shurikens, y su súper le permite moverse rápidamente y sorprender a los enemigos. Es un brawler con gran daño a corto alcance y movilidad, ideal para eliminar rápidamente a los oponentes.')">
-        <img src="https://static.wikia.nocookie.net/brawlstars/images/8/87/Kenji-pfp.png/revision/latest?cb=20240830194802&path-prefix=es" alt="Kenji">
+        <img src="https://static.wikia.nocookie.net/brawlstars/images/8/87/Kenji-pfp.png/revision/latest?cb=20240830194802&path-prefix=es" alt="">
         <h3>Kenji</h3>
       </div>
-      <div class="brawler-card inicial"data-tipo="luchador" data-nombre="Shelly" onclick="showModal('Shelly: es un brawler inicial de tipo luchador en Brawl Stars. Su ataque principal dispara una escopeta de corto alcance, y su súper lanza un potente disparo que destruye obstáculos y empuja a los enemigos. Es un brawler equilibrado, ideal para principiantes, con buen daño y capacidad para controlar el espacio en el mapa.')">
-        <img src="https://static.wikia.nocookie.net/brawlstars/images/c/c9/Shelly1-pfp.webp/revision/latest?cb=20231214173051&path-prefix=es" alt="Shelly">
+      <div class="brawler-card inicial"data-tipo="asesino" data-nombre="Shelly" onclick="showModal('Shelly: es un brawler inicial de tipo luchador en Brawl Stars. Su ataque principal dispara una escopeta de corto alcance, y su súper lanza un potente disparo que destruye obstáculos y empuja a los enemigos. Es un brawler equilibrado, ideal para principiantes, con buen daño y capacidad para controlar el espacio en el mapa.')">
+        <img src="https://static.wikia.nocookie.net/brawlstars/images/c/c9/Shelly1-pfp.webp/revision/latest?cb=20231214173051&path-prefix=es" alt="">
         <h3>Shelly</h3>
         </div>
         <div class="brawler-card mitico" data-tipo="tanque" data-nombre="Ollie" onclick="showModal('Ollie: es un brawler mítico de tipo tanque en Brawl Stars. Tiene una gran resistencia y es ideal para recibir daño por su equipo. Su ataque principal lanza discos que dañan a los enemigos, y su súper le permite moverse rápidamente o aumentar su resistencia. Es perfecto para aguantar en el frente de batalla y proteger a los demás brawlers.')">
-             <img src="https://static.wikia.nocookie.net/brawlstars/images/5/57/Ollie-pfp.png/revision/latest?cb=20241212135727&path-prefix=es" alt="Shelly">
+             <img src="https://static.wikia.nocookie.net/brawlstars/images/5/57/Ollie-pfp.png/revision/latest?cb=20241212135727&path-prefix=es" alt="">
             <h3>Ollie</h3>
         </div>
         <div class="brawler-card epico" data-tipo="lanzador" data-nombre="Gromp" onclick="showModal('Gromp: es un brawler épico de tipo lanzador en Brawl Stars. Su ataque principal lanza un proyectil que rebota entre los enemigos y puede dañar a varios a la vez. Su súper crea una zona de daño en el suelo, lo que le permite controlar áreas y presionar a los enemigos desde lejos. Es un brawler ideal para mantener a raya a los oponentes a distancia.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/9/99/Grom1pfp.png/revision/latest?cb=20231123005314&path-prefix=es" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/9/99/Grom1pfp.png/revision/latest?cb=20231123005314&path-prefix=es" alt="">
             <h3>Gromp</h3>
         </div>
         <div class="brawler-card epico" data-tipo="tanque" data-nombre="Ash" onclick="showModal('Ash: es un brawler épico de tipo tanque en Brawl Stars. Su ataque principal lanza bolas de fuego que infligen daño a los enemigos, y su súper le permite aumentar su velocidad de movimiento mientras lanza más bolas. Ash se destaca por su capacidad para aguantar mucho daño y presionar a los enemigos en el campo de batalla. Es un brawler resistente y muy útil en combates cercanos.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/3/36/Ash1-pfp.webp/revision/latest?cb=20231215154300&path-prefix=es" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/3/36/Ash1-pfp.webp/revision/latest?cb=20231215154300&path-prefix=es" alt="">
             <h3>Ash</h3>
         </div>
         <div class="brawler-card mitico" data-tipo="francotirador" data-nombre="Melodie" onclick="showModal('Melodie: es un brawler mítico de tipo francotirador en Brawl Stars. Su ataque principal dispara notas musicales a larga distancia que dañan a los enemigos. Su súper le permite curar a los aliados cercanos, lo que la convierte en un brawler útil para mantener a su equipo con vida en combates largos. Es ideal para jugadores que disfrutan de un rol de apoyo y precisión a distancia.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/f/ff/Melodie1-pfp.png/revision/latest?cb=20240229104516" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/f/ff/Melodie1-pfp.png/revision/latest?cb=20240229104516" alt="">
             <h3>Melodie</h3>
         </div>
         <div class="brawler-card inicial" data-tipo="francotirador" data-nombre="colt" onclick="showModal('Colt: es un brawler inicial de tipo francotirador en Brawl Stars. Su ataque principal dispara dos pistolas a la vez, creando una línea de balas que atraviesa a los enemigos. Su súper lanza una ráfaga de balas en una línea recta, causando gran daño a todo lo que atraviesa. Colt es ideal para jugadores que buscan atacar a larga distancia y destruir rápidamente a los oponentes.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/a/a2/Colt1-pfp.webp/revision/latest?cb=20231215182343&path-prefix=es" alt="Colt">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/a/a2/Colt1-pfp.webp/revision/latest?cb=20231215182343&path-prefix=es" alt="">
             <h3>Colt</h3>
         </div>
         <div class="brawler-card especial" data-tipo="tanque" data-nombre="el primo" onclick="showModal('El Primo: es un brawler especial de tipo tanque en Brawl Stars. Su ataque principal lanza puñetazos que causan daño a los enemigos cercanos. Su súper le permite saltar hacia un área y empujar a los enemigos, lo que lo convierte en un brawler muy útil para desbordar a los oponentes y tomar el control del campo de batalla. Es ideal para recibir daño y crear caos en el equipo rival.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/2/23/El_Primo1-pfp.png/revision/latest?cb=20220429011308" alt="El Primo">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/2/23/El_Primo1-pfp.png/revision/latest?cb=20220429011308" alt="">
             <h3>El Primo</h3>
         </div>
         <div class="brawler-card especial" data-tipo="apoyo" data-nombre="poco" onclick="showModal('Poco: es un brawler especial de tipo apoyo en Brawl Stars. Su ataque principal dispara ondas sónicas que dañan a los enemigos en línea recta. Su súper cura a los aliados cercanos con una onda sonora, lo que lo convierte en un brawler de apoyo clave en el equipo. Poco es ideal para mantener a tus compañeros de equipo con vida durante las batallas, especialmente en modos de juego más largos.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/5/5a/Poco1-pfp.png/revision/latest?cb=20240507111121" alt="Poco">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/5/5a/Poco1-pfp.png/revision/latest?cb=20240507111121" alt="">
             <h3>Poco</h3>
         </div>
         <div class="brawler-card epico" data-tipo="asesino" data-nombre="Edgar" onclick="showModal('Edgar: es un brawler épico de tipo asesino en Brawl Stars. Su ataque principal lanza golpes rápidos a corto alcance, y su súper le permite saltar sobre los enemigos, causando daño al aterrizar. Edgar es muy ágil y se especializa en el acoso rápido y en eliminar a los enemigos de forma sorpresiva, lo que lo convierte en un brawler excelente para eliminar a oponentes débiles y escapar rápidamente.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/8/8d/Edgar.png/revision/latest?cb=20201220011122&path-prefix=es" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/8/8d/Edgar.png/revision/latest?cb=20201220011122&path-prefix=es" alt="">
             <h3>Edgar</h3>
         </div>
         <div class="brawler-card legendario" data-tipo="asesino" data-nombre="Spike" onclick="showModal('Spike: es un brawler legendario de tipo asesino en Brawl Stars. Su ataque principal lanza una serie de pinchos que se dispersan en un área amplia, causando daño a los enemigos cercanos. Su súper lanza una bola de espinas que explota y deja un área de daño por un corto tiempo. Spike es excelente para controlar el espacio y hacer daño a varios enemigos a la vez, especialmente en zonas estrechas. Es ideal para jugadores que prefieren un estilo de juego táctico y de control del área.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/9/97/Spike1-pfp.png/revision/latest?cb=20250301030317" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/9/97/Spike1-pfp.png/revision/latest?cb=20250301030317" alt="">
             <h3>Spike</h3>
         </div>
         <div class="brawler-card epico" data-tipo="tanque" data-nombre="Bibi" onclick="showModal('Bibi: es un brawler épico de tipo tanque en Brawl Stars. Su ataque principal lanza una bola de goma que rebota entre los enemigos, causando daño a los que golpea. Su súper le permite golpear con su bate, empujando a los enemigos y causando un gran daño. Bibi es muy resistente y se destaca en el combate cercano, además de tener la capacidad de interrumpir a los enemigos con su súper. Ideal para presionar a los rivales y tomar el control en el frente de batalla.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/a/a1/Bibi1-pfp.png/revision/latest?cb=20220429013921" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/a/a1/Bibi1-pfp.png/revision/latest?cb=20220429013921" alt="">
             <h3>Bibi</h3>
         </div>
         <div class="brawler-card mitico" data-tipo="francotirador" data-nombre="Mr.P" onclick="showModal('Mr. P: es un brawler mítico de tipo francotirador en Brawl Stars. Su ataque principal lanza maletines que rebotan y crean pequeños porteros que atacan a los enemigos cercanos. Su súper lanza una caja que genera más porteros, lo que le permite controlar áreas y presionar a los enemigos a distancia. Mr. P es ideal para mantener una constante presión sobre el rival y brindar apoyo a su equipo con su control de área.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/1/19/Mr._P1-pfp.png/revision/latest?cb=20220429014441" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/1/19/Mr._P1-pfp.png/revision/latest?cb=20220429014441" alt="">
             <h3>Mr.P</h3>
         </div>
         <div class="brawler-card inicial" data-tipo="francotirador" data-nombre="Rico" onclick="showModal('Rico: es un brawler inicial de tipo francotirador en Brawl Stars. Su ataque principal dispara bolas de cristal que rebotan en las paredes, lo que le permite dañar a enemigos que se esconden detrás de obstáculos. Su súper crea una serie de rebotes adicionales, cubriendo más área y haciendo mucho daño. Rico es ideal para jugadores que saben aprovechar el rebote de sus proyectiles para controlar el mapa y atacar desde diferentes ángulos.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/7/7e/Rico1-pfp.png/revision/latest?cb=20220429011633" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/7/7e/Rico1-pfp.png/revision/latest?cb=20220429011633" alt="">
             <h3>Rico</h3>
         </div>
         <div class="brawler-card epico" data-tipo="asesino" data-nombre="Mortis" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/1/14/Mortis1-pfp.png/revision/latest?cb=20250301030807" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/1/14/Mortis1-pfp.png/revision/latest?cb=20250301030807" alt="">
             <h3>Mortis</h3>
         </div>
         <div class="brawler-card mitico" data-tipo="asesino" data-nombre="Eve" onclick="showModal('Shelly', 'Escopeta de corto alcance. Su súper destruye obstáculos y empuja enemigos.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/0/02/Eve1-pfp.png/revision/latest?cb=20231002062109" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/0/02/Eve1-pfp.png/revision/latest?cb=20231002062109" alt="">
             <h3>Eve</h3>
         </div>
         <div class="brawler-card especial" data-tipo="apoyo" data-nombre="Nita" onclick="showModal('Mortis: es un brawler épico de tipo asesino en Brawl Stars. Su ataque principal lanza una rápida estocada con su pala, causando daño a los enemigos cercanos. Su súper le permite realizar una gran zambullida hacia adelante, atravesando a los enemigos y esquivando ataques. Mortis es extremadamente ágil y excelente para eliminar a brawlers débiles o desprotegidos, pero necesita ser muy rápido para evitar el daño debido a su poca salud.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/0/01/Nita1-pfp.webp/revision/latest?cb=20231215160623&path-prefix=es" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/0/01/Nita1-pfp.webp/revision/latest?cb=20231215160623&path-prefix=es" alt="">
             <h3>Nita</h3>
         </div>
         <div class="brawler-card mitico" data-tipo="asesino" data-nombre="Mico" onclick="showModal('Mico: es un brawler mítico de tipo asesino en Brawl Stars. Su ataque principal lanza una serie de esferas que explotan al contacto, causando daño a los enemigos cercanos. Su súper le permite desplegar una nube que ralentiza a los enemigos dentro de ella, lo que facilita eliminarlos. Mico es ideal para un estilo de juego rápido y agresivo, con la capacidad de controlar el campo de batalla mediante el daño y la ralentización.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/f/f4/Mico1-pfp.png/revision/latest?cb=20231224210800" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/f/f4/Mico1-pfp.png/revision/latest?cb=20231224210800" alt="">
             <h3>Mico</h3>
         </div>
         <div class="brawler-card mitico" data-tipo="francotirador" data-nombre="Squeak" onclick="showModal('Squeak: es un brawler mítico de tipo francotirador en Brawl Stars. Su ataque principal lanza bolas pegajosas que rebotan y explotan al contacto, causando daño en área. Su súper lanza una gran esfera que se adhiere a cualquier superficie y explota después de un corto tiempo, causando un daño masivo a los enemigos cercanos. Squeak es ideal para presionar a los rivales desde lejos y controlar áreas del mapa con sus explosiones.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/b/bb/Squeak1-pfp.png/revision/latest?cb=20220429014621" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/b/bb/Squeak1-pfp.png/revision/latest?cb=20220429014621" alt="">
             <h3>Squeak</h3>
         </div>
-        <div class="brawler-card epico" data-tipo="luchador" data-nombre="Shade" onclick="showModal('Shade: es un brawler épico de tipo luchador en Brawl Stars. Su ataque principal lanza poderosos golpes a corto alcance que infligen daño a los enemigos cercanos. Su súper le permite hacer un ataque cuerpo a cuerpo devastador, lo que lo convierte en un brawler ideal para el combate directo. Shade es fuerte en enfrentamientos de corta distancia y puede ser muy efectivo en la destrucción de tanques y otros brawlers que se acerquen.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/9/95/Shade-pfp.png/revision/latest?cb=20241030195220&path-prefix=es" alt="Shelly">
+        <div class="brawler-card epico" data-tipo="asesino" data-nombre="Shade" onclick="showModal('Shade: es un brawler épico de tipo luchador en Brawl Stars. Su ataque principal lanza poderosos golpes a corto alcance que infligen daño a los enemigos cercanos. Su súper le permite hacer un ataque cuerpo a cuerpo devastador, lo que lo convierte en un brawler ideal para el combate directo. Shade es fuerte en enfrentamientos de corta distancia y puede ser muy efectivo en la destrucción de tanques y otros brawlers que se acerquen.')">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/9/95/Shade-pfp.png/revision/latest?cb=20241030195220&path-prefix=es" alt="">
             <h3>Shade</h3>
         </div>
         <div class="brawler-card mitico" data-tipo="lanzador" data-nombre="Willow" onclick="showModal('Willow: es un brawler mítico de tipo lanzador en Brawl Stars. Su ataque principal lanza una especie de proyectiles envenenados que dañan a los enemigos a medida que atraviesan el mapa. Su súper invoca una nube de veneno que ralentiza a los enemigos y les inflige daño continuo mientras estén dentro de ella. Willow es ideal para mantener controladas a las hordas enemigas, especialmente en combates donde puede aplicar daño a lo largo del tiempo y dificultar el movimiento del rival.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/b/b7/Willow1-pfp.webp/revision/latest?cb=20231217164656&path-prefix=es" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/b/b7/Willow1-pfp.webp/revision/latest?cb=20231217164656&path-prefix=es" alt="">
             <h3>Willow</h3>
         </div>
         <div class="brawler-card mitico" data-tipo="lanzador" data-nombre="Juju" onclick="showModal('Juju: es un brawler mítico de tipo lanzador en Brawl Stars. Su ataque principal lanza pequeñas bombas que explotan al contacto, causando daño a los enemigos en el área de impacto. Su súper le permite crear una zona de daño continua que afecta a los enemigos dentro de ella. Juju es ideal para controlar áreas del mapa y presionar a los rivales a distancia, con la capacidad de dañar a varios enemigos a la vez, especialmente en enfrentamientos de largo alcance.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/9/9e/Juju-pfp.png/revision/latest?cb=20241030194758&path-prefix=es" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/9/9e/Juju-pfp.png/revision/latest?cb=20241030194758&path-prefix=es" alt="">
             <h3>Juju</h3>
         </div>
         <div class="brawler-card legendario" data-tipo="apoyo" data-nombre="Kit" onclick="showModal('Kit: es un brawler legendario de tipo apoyo en Brawl Stars. Su ataque principal lanza proyectiles rápidos que rebotan entre los enemigos, causando daño. Su súper le permite crear una barrera protectora que cura a los aliados cercanos mientras les otorga algo de protección frente a los ataques enemigos. Kit es ideal para jugadores que prefieren un estilo de juego de apoyo, manteniendo a su equipo con vida y ofreciendo control en las batallas.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/2/23/Kit1-pfp.png/revision/latest?cb=20231224210915" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/2/23/Kit1-pfp.png/revision/latest?cb=20231224210915" alt="">
             <h3>Kit</h3>
         </div>
         <div class="brawler-card legendario"  data-tipo="asesino" data-nombre="Chester" onclick="showModal('Chester: es un brawler legendario de tipo asesino en Brawl Stars. Su ataque principal le permite lanzar bombas de diversos efectos, como ralentizar a los enemigos o causar un daño explosivo. Su súper le da la habilidad de elegir entre varias sorpresas que alteran el curso del combate, lo que lo convierte en un brawler impredecible y versátil. Chester es ideal para jugadores que disfrutan de un estilo de juego rápido y táctico, capaz de adaptarse a diversas situaciones durante la batalla.')">
-            <img src="https://static.wikia.nocookie.net/brawlstars/images/d/db/Chester1-pfp.png/revision/latest?cb=20221216064656" alt="Shelly">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/d/db/Chester1-pfp.png/revision/latest?cb=20221216064656" alt="">
             <h3>Chester</h3>
         </div>
+        <div class="brawler-card epico" data-tipo="tanque" data-nombre="Jacky" onclick="showModal('Jacky: es un brawler épico de tipo tanque en Brawl Stars. Su ataque principal lanza una serie de bolas de tierra que dañan a los enemigos en un área de efecto cerca de ella. Su súper crea un potente vacío que atrae a los enemigos hacia ella, causando daño y dejándolos vulnerables a sus ataques. Jacky es ideal para el control de espacio, atrapando a los enemigos y permitiendo que su equipo se aproveche de su posición. Es una excelente opción para jugadores que buscan un brawler resistente y con capacidad para interrumpir a los rivales.')">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/f/fc/Jacky1-pfp.png/revision/latest?cb=20220429011814" alt="">
+            <h3>Jacky</h3>
+        </div>
+        <div class="brawler-card mitico" data-tipo="asesino" data-nombre="Buzz" onclick="showModal('Buzz: es un brawler mítico de tipo asesino en Brawl Stars. Su ataque principal lanza ondas sónicas que dañan a los enemigos en su camino. Su súper lanza una boya que atrae y aturde a los enemigos cercanos, lo que lo convierte en un gran control de espacio. Es ideal para jugadores que buscan un brawler con capacidad de atrapar y desactivar a los rivales.')">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/b/be/Buzz1-pfp.png/revision/latest?cb=20220429015140" alt="">
+            <h3>Buzz</h3>
+        </div>
+        <div class="brawler-card legendario" data-tipo="asesino" data-nombre="Leon" onclick="showModal('Leon: es un brawler legendario de tipo asesino en Brawl Stars. Su ataque lanza shurikens que causan daño a distancia, y su súper lo hace invisible, permitiéndole emboscar a los enemigos o escapar. Es rápido y letal, ideal para jugadores que prefieren un estilo de juego sigiloso.')">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/8/8b/Leon1-pfp.png/revision/latest?cb=20250301030238" alt="">
+            <h3>Leon</h3>
+        </div>
+        <div class="brawler-card mitico" data-tipo="apoyo" data-nombre="Doug" onclick="showModal('Doug: es un brawler mítico de tipo apoyo en Brawl Stars. Su ataque lanza un hot dog que puede curar aliados o dañar enemigos. Su súper le permite reaparecer con vida a él o a un aliado, y su habilidad estelar aumenta la velocidad del brawler resucitado. Ideal para soporte y recuperación en equipo.')">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/3/35/Doug1-pfp.png/revision/latest?cb=20230817115228" alt="">
+            <h3>Doug</h3>
+        </div>
+        <div class="brawler-card mitico" data-tipo="Tanque" data-nombre="Buster" onclick="showModal('Buster es un brawler mitico de tipo tanque en Brawl Stars. Su ataque principal, Destello de lente, lanza una ola de luz que daña a los enemigos. Su súper, Montaje, crea un escudo que bloquea proyectiles y refleja energía hacia los enemigos. Ideal para proteger a aliados y controlar el campo de batalla.')">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/4/4c/Buster1-pfp.png/revision/latest?cb=20221105091624" alt="">
+            <h3>Buster</h3>
+        </div>
+        <div class="brawler-card legendario" data-tipo="apoyo" data-nombre="Crow" onclick="showModal('Crow: es un brawler legendario de tipo asesino en Brawl Stars. Su ataque lanza tres cuchillos envenenados que causan daño a lo largo del tiempo y reducen la curación enemiga. Su súper le permite saltar, lanzando dagas envenenadas al despegar y al aterrizar. Es ideal para hostigar desde la distancia y contrarrestar a brawlers de apoyo.​')">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/4/48/Crow1-pfp.png/revision/latest?cb=20250301030300" alt="">
+            <h3>Crow</h3>
+        </div>
+
+        <div class="brawler-card inicial" data-tipo="tanque" data-nombre="Bull" onclick="showModal('Bull: es un brawler común de tipo tanque en Brawl Stars. Su ataque principal, a dos cañones, dispara una ráfaga de balas con alto daño a corta distancia. Su súper, Bulldozer, le permite embestir hacia adelante, destruyendo obstáculos y empujando a los enemigos. Es ideal para abrir caminos, absorber daño y presionar al equipo rival.​')">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/e/e8/Bull1-pfp.jpg/revision/latest?cb=20240303215404&path-prefix=es" alt="">
+            <h3>Bull</h3>
+        </div>
+        <div class="brawler-card epico" data-tipo="lanzador" data-nombre="Jacky" onclick="showModal('Larry & Lawrie: son un brawler épico de tipo artillería. Larry lanza boletos explosivos y Lawrie lo apoya con su pistola eléctrica. Su súper invoca a Lawrie para atacar a los enemigos, y su gadget les permite intercambiar armas para adaptarse mejor al combate. Perfectos para control de área y apoyo táctico.')">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/7/71/Larry_%26_Lawrie_Icono.webp/revision/latest?cb=20240203172244&path-prefix=es" alt="">
+            <h3>Larry & Lawrie</h3>
+        </div>
+        <div class="brawler-card mitico" data-tipo="asesino" data-nombre="Fang" onclick="showModal('Fang: es un brawler cromático de tipo asesino en Brawl Stars. Su ataque principal es una patada giratoria que inflige daño significativo; si no golpea a un enemigo, su zapato vuela hacia el objetivo, causando daño menor pero con mayor alcance. Su súper habilidad, Patada Dragónica, le permite lanzar una potente patada que rebota entre enemigos cercanos hasta cuatro veces, causando daño y aturdiendo a los oponentes. Fang es ideal para jugadores que buscan un brawler ágil y con alto daño explosivo.')">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/f/fb/Fang1-pfp.png/revision/latest?cb=20220429015244" alt="">
+            <h3>Fang</h3>
+        </div>
+        <div class="brawler-card inicial" data-tipo="lanzador" data-nombre="Dynamike" onclick="showModal('Dynamike: es un brawler superraro de tipo lanzador. Lanza dinamita que explota tras un breve retraso, causando gran daño en un área pequeña. Su súper, Barril Explosivo, lanza una gran bomba que inflige daño masivo y repele a los enemigos. Es ideal para controlar zonas y sorprender al enemigo desde la distancia.​')">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/d/d9/Dynamike1-pfp.png/revision/latest?cb=20220428153421" alt="">
+            <h3>Dynamike</h3>
+        </div>
+        <div class="brawler-card mitico" data-tipo="francotirador" data-nombre="Gray" onclick="showModal('Gray: es un brawler mítico de tipo apoyo en Brawl Stars. Su ataque principal, Finger Pistol, dispara a larga distancia y puede ser potenciado con su gadget Walking Cane, que atrae a los enemigos hacia él. Su súper, Dimensional Doors, crea portales que permiten a él y a sus aliados moverse rápidamente por el mapa, facilitando escapes o ataques sorpresivos. Con su star power New Perspective, al usar los portales, él y sus compañeros recuperan salud, lo que lo convierte en un excelente soporte para el equipo.​')">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/4/49/Gray1-pfp.png/revision/latest?cb=20221216064637" alt="">
+            <h3>Gray</h3>
+        </div>  
+        <div class="brawler-card epico" data-tipo="tanque" data-nombre="Frank" onclick="showModal('Frank: es un brawler épico de tipo tanque. Su ataque principal es un golpe de martillo que daña y puede destruir obstáculos. Su súper, Terapia de choque, aturde a los enemigos en su área de efecto. Con mucha salud, es ideal para aguantar daño y controlar zonas.')">
+            <img src="https://static.wikia.nocookie.net/brawlstars/images/8/86/Frank1-pfp.png/revision/latest?cb=20220429013846" alt="">
+            <h3>Frank</h3>
+        </div>   
     </div>
   </section>
   
