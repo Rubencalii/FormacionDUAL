@@ -230,16 +230,16 @@
         .reset-btn {
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #f03e3e;
-            color: #fff; 
+            background-color:rgba(0, 0, 0, 0.7);
+            color:#ffffff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             margin-top: 30px; 
-            width: 200px;
+            width: 100%;
         }
         .reset-btn:hover {
-            background-color: #d93030;
+            background-color: #febe20;
         }
 
         /*Modo de juego*/
@@ -326,7 +326,6 @@
     </header><nav>
     <a href="#general">¿Qué es Brawl Stars?</a>
     <a href="#galeria">Galería de Brawlers</a>
-    <a href="#container">Formar Equipos</a>
     <a href="#modos">Modos de Juego</a>
 </nav>
 
@@ -622,7 +621,6 @@
     <div class="team-container" id="team-container"></div>
 
     <div id="team-stats" class="team-stats"></div>
-
     <button class="reset-btn" onclick="resetTeam()">Reiniciar Equipo</button>
 
     <script>
@@ -631,6 +629,7 @@
         "Kenji": {
             salud: 4200, daño: 1120, velocidad: 2.8, 
             imagen: "https://static.wikia.nocookie.net/brawlstars/images/8/87/Kenji-pfp.png/revision/latest?cb=20240830194802&path-prefix=es"
+            
         },
         "Shelly": {
             salud: 3000, daño: 560, velocidad: 2.9, 
@@ -640,7 +639,7 @@
             salud: 3200, daño: 480, velocidad: 3.1, 
             imagen: "https://static.wikia.nocookie.net/brawlstars/images/5/57/Ollie-pfp.png/revision/latest?cb=20241212135727&path-prefix=es"
         },
-        "Gromp": {
+        "Gro mp": {
             salud: 3600, daño: 720, velocidad: 2.5, 
             imagen: "https://static.wikia.nocookie.net/brawlstars/images/9/99/Grom1pfp.png/revision/latest?cb=20231123005314&path-prefix=es"
         },
@@ -676,7 +675,7 @@
             salud: 5200, daño: 130, velocidad: 2.7, 
             imagen: "https://static.wikia.nocookie.net/brawlstars/images/a/a1/Bibi1-pfp.png/revision/latest?cb=20220429013921"
         },
-        "Mr.p": {
+        "Mr.P": {
             salud: 4000, daño: 640, velocidad: 2.7, 
             imagen: "https://static.wikia.nocookie.net/brawlstars/images/1/19/Mr._P1-pfp.png/revision/latest?cb=20220429014441"
         },
@@ -752,7 +751,7 @@
             salud: 6000, daño: 780, velocidad: 2.6, 
             imagen: "https://static.wikia.nocookie.net/brawlstars/images/e/e8/Bull1-pfp.jpg/revision/latest?cb=20240303215404&path-prefix=es"
         },
-        "Larry&Lawrie": {
+        "Larry & Lawrie": {
             salud: 3800, daño: 720, velocidad: 2.8, 
             imagen: "https://static.wikia.nocookie.net/brawlstars/images/7/71/Larry_%26_Lawrie_Icono.webp/revision/latest?cb=20240203172244&path-prefix=es"
         },
@@ -779,7 +778,7 @@
         function addBrawlerToTeam() {
             const brawlerName = document.getElementById('brawler-select').value;
             
-            if (brawlerName && team.length < 5 && !team.includes(brawlerName)) {
+            if (brawlerName && team.length < 3 && !team.includes(brawlerName)) {
                 team.push(brawlerName);
                 displayTeam();
                 updateTeamStats();
