@@ -175,8 +175,51 @@
     border: 3px solid #ed1d24;
     border-radius: 50%;
   }
-  
-    
+
+  /* Personajes section */
+
+    .personaje {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: transform 0.3s ease;
+      margin-top: 30px;
+    }
+
+    .personaje:hover {
+      transform: translateY(-5px);
+    }
+
+    .personaje-img {
+      flex: 0 0 250px;
+      margin-right: 20px;
+    }
+
+    .personaje-img img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .personaje-info {
+      flex: 1;
+    }
+
+    .personaje-info h3 {
+      margin: 0;
+      font-size: 1.8em;
+      color: #333;
+    }
+
+    .personaje-info p {
+      font-size: 1.1em;
+      color: #666;
+      line-height: 1.6;
+    }
+
     /* Footer */
     footer {
       background-color:#b8b8b8;
