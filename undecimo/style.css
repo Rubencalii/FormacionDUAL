@@ -84,14 +84,7 @@
     font-size: 1.2em;
     color: #ffcc00;
   } 
-  /* FOOTER */
-  footer {
-    background-color: #111;
-    padding: 1em;
-    text-align: center;
-    font-size: 0.9em;
-    color: #ccc;
-  }
+
 
   /* Mas cards */ 
   .personajes-destacados {
@@ -183,5 +176,40 @@
     border-radius: 50%;
   }
   
-  
+    
+    /* Footer */
+    footer {
+      background-color:#b8b8b8;
+      color: #ffffff;  
+      text-align: center;  
+      padding: 20px 0;  
+      font-family: Arial, sans-serif;  
+    }
+    
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    footer p {
+      margin-bottom: 15px;  
+      font-size: 14px;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center; 
+      gap: 20px;  
+    }
+    
+    .social-links a img {
+      width: 40px;  
+      height: 40px;  
+      transition: transform 0.3s ease;  
+    }
+    
+    .social-links a img:hover {
+      transform: scale(1.1);  
+    }
+    
   
