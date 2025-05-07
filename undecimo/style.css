@@ -128,3 +128,60 @@
     transform: scale(1.05);
   }
   
+  /* Peliculas en su tiempo */
+
+  .timeline-horizontal {
+    padding: 3em 2em;
+    background-color: #0d1a26;
+    color: #f0f0f0;
+    text-align: center;
+    overflow-x: auto;
+  }
+  
+  .timeline-horizontal h3 {
+    font-size: 2em;
+    color: #ffcc00;
+    margin-bottom: 2em;
+  }
+  
+  .timeline-track {
+    display: flex;
+    gap: 2em;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 1em;
+    position: relative;
+    border-bottom: 4px solid #ed1d24;
+    width: 165%; 
+  }
+  
+  .timeline-event {
+    background-color: #111;
+    border-radius: 10px;
+    padding: 1em;
+    width: 160px;
+    flex-shrink: 0;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+  }
+  
+  .timeline-event h4 {
+    color: #ffcc00;
+    margin-bottom: 0.5em;
+  }
+  
+  .timeline-event::after {
+    content: "";
+    position: absolute;
+    bottom: -1.1em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: #ffcc00;
+    border: 3px solid #ed1d24;
+    border-radius: 50%;
+  }
+  
+  
+  
