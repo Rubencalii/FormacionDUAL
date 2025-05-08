@@ -220,6 +220,90 @@
       line-height: 1.6;
     }
 
+    /* Ropa de Marvel */
+
+    .ropa-marvel {
+      padding: 2em;
+      background-color: #0d1a26;
+      color: #f0f0f0;
+      text-align: center;
+    }
+
+    .ropa-marvel h2 {
+      font-size: 2.5em;
+      margin-bottom: 1em;
+      color: #ffcc00;
+    }
+
+    .ropa-marvel .ropa-intro {
+      font-size: 1.2em;
+      margin-bottom: 2em;
+      color: #ffffff;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Estilos de la grid de ropa */
+    .ropa-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+      gap: 2em;
+      margin-top: 2em;
+      padding: 0 2em;
+    }
+
+    .ropa-card {
+      background-color: #111;
+      border-radius: 12px;
+      padding: 1em;
+      transition: transform 0.3s ease;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .ropa-card img {
+      width: 100%;
+      height: 400px;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+
+    .ropa-card h3 {
+      font-size: 1.5em;
+      margin-bottom: 0.5em;
+      color: #ffcc00;
+    }
+
+    .ropa-card p {
+      font-size: 1em;
+      color: #ddd;
+      margin-bottom: 1em;
+    }
+
+    .ropa-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Botón de compra */
+    .btn-comprar {
+      background-color: #ed1d24;
+      color: white;
+      border: none;
+      padding: 0.8em 1.5em;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-comprar:hover {
+      background-color: #d1161f;
+    }
+    /*Peliculas*/
+
+    
     /* Footer */
     footer {
       background-color:#b8b8b8;
