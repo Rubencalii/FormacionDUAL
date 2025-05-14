@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | CUPRA</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="./img/cupra-logo_brandlogos.net_rnjls-512x512.png">
+</head>
+<body>
+    <header>
+    <div class="logo"><img src="./img/cupra-logo_brandlogos.net_rnjls-512x512.png" alt=""></div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./modelos.html">Modelos</a></li>
+        <li><a href="#">Historia</a></li>
+        <li><a href="#">Tecnología</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    </header>
+    <main>
+        <main class="main-contacto">
+
+  <!-- Video de fondo -->
+  <video autoplay muted loop playsinline class="video-fondo">
+    <source src="./video/Presentación nueva imagen Cupra.mp4" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
+
+  <!-- Contenedor centrado -->
+  <div class="contacto-contenido">
+    <section class="contacto-formulario">
+      <h1>Contáctanos</h1>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="_replyto" required>
+        </div>
+
+        <div class="form-group">
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto" name="asunto" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+        </div>
+
+        <div class="form-btn">
+          <button type="submit">Enviar mensaje</button>
+        </div>
+
+      </form>
+    </section>
+  </div>
+</main>
+
+    </main>
+</body>
+</html>
