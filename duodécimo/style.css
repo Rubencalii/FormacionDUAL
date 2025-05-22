@@ -436,3 +436,100 @@ textarea {
     .boton-cupra:hover {
       background-color: #e68a3a;
     }
+
+    /* Tecnologia */
+    .tecnologia {
+      text-align: center;
+      margin-bottom: 40px;
+      color: whitesmoke;
+    }
+
+    .tecnologia h1 {
+      font-size: 2.5rem;
+    }
+
+    .tecnologia p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Carrousel */
+    .carousel {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .carousel-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 20px;
+    }
+
+    .carousel-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .carousel-item {
+      flex: 0 0 48%;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      text-align: center;
+      width: 50%;
+    }
+
+    .carousel-item img {
+      width: 50%;
+      height: 350px;         
+      object-fit: cover;     
+      border-radius: 10px;
+    }
+
+    .carousel-item h3 {
+      font-size: 1.4rem;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .carousel-item p {
+      font-size: 1rem;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    /* Sección Interactiva */
+    .interactiva {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .interactiva button {
+      background-color: #ff9f00;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .interactiva button:hover {
+      background-color: #e68900;
+    }
+
+    #informacionTecnologia {
+      margin-top: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      color: #555;
+    }
