@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Sitio oficial de Otakar Esports, el equipo de Mixwell. Noticias, equipo, vídeos y próximos eventos." />
+  <meta name="author" content="Otakar Esports" />
+  <meta name="keywords" content="Otakar, Mixwell, Esports, Counter Strike, Team, Gaming" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Otakar Esports - Equipo de Mixwell</title>
+</head>
+<body>
+  <header>
+    <h1>Otakar Esports</h1>
+    <nav>
+      <a href="#equipo" tabindex="1">Equipo</a>
+      <a href="#noticias" tabindex="2">Noticias</a>
+      <a href="#videos" tabindex="3">Videos</a>
+      <a href="#calendario" tabindex="4">Calendario</a>
+      <a href="#contacto" tabindex="5">Contacto</a>
+      <button id="toggle-theme" style="position: fixed; top: 1rem; right: 1rem;">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="reveal">
+      <h2>Este título aparecerá animado</h2>
+      <p>Y este texto también</p>
+    </div>
+
+    <section class="hero" aria-label="Sección principal de bienvenida">
+      <div class="hero-text">
+        <h2>Otakar Esports - Equipo de Mixwell</h2>
+        <p>Descubre las últimas noticias, vídeos y eventos del equipo de esports más apasionado.</p>
+        <a href="#noticias" class="btn-primary" tabindex="6">Ver Noticias</a>
+      </div>
+      <div class="hero-img" aria-hidden="true">
+        <img src="https://cdn.example.com/mixwell-hero.jpg" alt="Imagen de Mixwell, jugador principal de Otakar Esports" />
+      </div>
+    </section>
+
+    <section id="equipo" class="team" tabindex="-1" aria-label="Sección equipo">
+      <h2>Nuestro Equipo</h2>
+      <div class="team-grid">
+        <article class="player-card" tabindex="0">
+            <img src="https://cdn.example.com/mixwell.jpg" alt="Mixwell" />
+            <h3>Mixwell</h3>
+            <p>
+            <img src="https://cdn.example.com/icons/founder.svg" alt="Icono Fundador" class="role-icon" />
+            Fundador / Exjugador - Valorant / CS:GO
+            </p>
+        </article>
+        <article class="player-card" tabindex="0">
+            <img src="https://cdn.example.com/azazin.jpg" alt="azaziN" />
+            <h3>azaziN (Sergio Gil)</h3>
+            <p>
+            <img src="https://cdn.example.com/icons/duelist.svg" alt="Icono Duelista" class="role-icon" />
+            Duelista - Valorant
+            </p>
+        </article>
+        <article class="player-card" tabindex="0">
+            <img src="https://cdn.example.com/mober.jpg" alt="mober" />
+            <h3>mober (David Illán Padilla)</h3>
+            <p>
+            <img src="https://cdn.example.com/icons/initator.svg" alt="Icono Iniciador" class="role-icon" />
+            Iniciador - Valorant
+            </p>
+        </article>
+        <article class="player-card" tabindex="0">
+            <img src="https://cdn.example.com/negradas.jpg" alt="Negradas" />
+            <h3>Negradas (Alejandro Pérez)</h3>
+            <p>
+            <img src="https://cdn.example.com/icons/sentinel.svg" alt="Icono Centinela" class="role-icon" />
+            Centinela - Valorant
+            </p>
+        </article>
+        <article class="player-card" tabindex="0">
+            <img src="https://cdn.example.com/yaggert.jpg" alt="yaggert" />
+            <h3>yaggert (Joel Torres Díaz)</h3>
+            <p>
+            <img src="https://cdn.example.com/icons/controller.svg" alt="Icono Controlador" class="role-icon" />
+            Controlador - Valorant
+            </p>
+        </article>
+        <article class="player-card" tabindex="0">
+            <img src="https://cdn.example.com/tomatte.jpg" alt="tomatte" />
+            <h3>tomatte (Diego Alcázar)</h3>
+            <p>
+            <img src="https://cdn.example.com/icons/coach.svg" alt="Icono Coach" class="role-icon" />
+            Coach
+            </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Nueva sección de títulos ganados -->
+    <section id="titulos" class="titles" tabindex="-1" aria-label="Títulos ganados por Otakar Esports">
+      <h2>Títulos Ganados</h2>
+      <ul>
+        <li>Campeonato Nacional de Counter Strike 2023</li>
+        <li>Valencia Esports Open 2024</li>
+        <li>Torneo Internacional de Valorant 2024</li>
+        <li>Major Invitational CS:GO 2023</li>
+        <li>DreamHack Open 2022</li>
+      </ul>
+    </section>
+
+    <section id="noticias" class="news" tabindex="-1" aria-label="Sección noticias">
+      <h2>Noticias Recientes</h2>
+      <div class="news-articles">
+        <article class="news-article" tabindex="0">
+          <h3>Otakar gana el campeonato nacional</h3>
+          <p>El equipo Otakar Esports ha triunfado en el campeonato nacional de Counter Strike.</p>
+        </article>
+        <article class="news-article" tabindex="0">
+          <h3>Nuevo patrocinador confirmado</h3>
+          <p>Otakar Esports anuncia un nuevo patrocinador para la próxima temporada.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="videos" class="videos" tabindex="-1" aria-label="Sección videos">
+      <h2>Vídeos Destacados</h2>
+      <div class="video-slider" aria-live="polite" aria-label="Galería de vídeos">
+        <div class="video-container" id="video-container" style="transform: translateX(0%);">
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1" allowfullscreen></iframe>
+          </div>
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" title="Video 2" allowfullscreen></iframe>
+          </div>
+          <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ" title="Video 3" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="video-controls">
+        <button class="video-btn" aria-label="Video anterior" id="prev-btn" tabindex="7">&larr;</button>
+        <button class="video-btn" aria-label="Video siguiente" id="next-btn" tabindex="8">&rarr;</button>
+      </div>
+    </section>
+
+    <section id="calendario" class="calendar" tabindex="-1" aria-label="Calendario de eventos">
+      <h2>Próximos Eventos</h2>
+      <ul class="event-list">
+        <li tabindex="0"><span class="event-date">01/06/2025</span> - Torneo internacional de esports</li>
+        <li tabindex="0"><span class="event-date">15/06/2025</span> - Evento de streaming en vivo</li>
+        <li tabindex="0"><span class="event-date">30/06/2025</span> - Campeonato regional</li>
+      </ul>
+    </section>
+
+    <section id="contacto" class="contact" tabindex="-1" aria-label="Formulario de contacto">
+      <h2>Contacto</h2>
+      <form action="#" method="post" aria-describedby="form-instructions">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required aria-required="true" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required aria-required="true" />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required aria-required="true"></textarea>
+
+        <button type="submit" tabindex="9">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Sección Patrocinadores -->
+    <section id="patrocinadores" aria-label="Patrocinadores" class="reveal">
+      <h2>Patrocinadores</h2>
+      <div class="sponsors-logos">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Red_Bull_Logo.svg/2560px-Red_Bull_Logo.svg.png" alt="Logo Red Bull" style="max-height:100px;" />
+      </div>
+    </section>
+
+    <!-- Sección Redes Sociales -->
+    <section id="redes" aria-label="Redes sociales" class="reveal">
+      <h2>Síguenos en redes</h2>
+      <div class="social-buttons">
+        <a href="https://twitter.com/otakaresports" target="_blank" rel="noopener" aria-label="Twitter">🐦 Twitter</a>
+        <a href="https://www.twitch.tv/otakaresports" target="_blank" rel="noopener" aria-label="Twitch">🎮 Twitch</a>
+        <a href="https://www.instagram.com/otakaresports" target="_blank" rel="noopener" aria-label="Instagram">📸 Instagram</a>
+      </div>
+    </section>
+
+    <!-- Sección Estadísticas del Equipo -->
+    <section id="estadisticas" aria-label="Estadísticas del equipo" class="reveal">
+      <h2>Estadísticas del Equipo</h2>
+      <ul class="stats-list">
+        <li><strong>Victorias:</strong> 28</li>
+        <li><strong>Partidas Jugadas:</strong> 45</li>
+        <li><strong>Horas Jugadas:</strong> 1200</li>
+        <li><strong>Campeonatos Ganados:</strong> 5</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Otakar Esports. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Script para slider de videos
+    const container = document.getElementById('video-container');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    let currentIndex = 0;
+    const totalVideos = container.children.length;
+
+    function updateSlider() {
+      container.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalVideos) % totalVideos;
+      updateSlider();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalVideos;
+      updateSlider();
+    });
+
+    // Animación reveal al hacer scroll
+    function reveal() {
+      const reveals = document.querySelectorAll('.reveal');
+      for (const revealEl of reveals) {
+        const windowHeight = window.innerHeight;
+        const revealTop = revealEl.getBoundingClientRect().top;
+        const revealPoint = 150;
+
+        if (revealTop < windowHeight - revealPoint) {
+          revealEl.classList.add('active');
+        } else {
+          revealEl.classList.remove('active');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', reveal);
+
+    // Cambio tema oscuro/claro
+    const toggleThemeBtn = document.getElementById('toggle-theme');
+    toggleThemeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleThemeBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>

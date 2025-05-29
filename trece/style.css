@@ -1,0 +1,239 @@
+:root {
+  --background: #121212;
+  --background-alt: #1E1E1E;
+  --white: #FFFFFF;
+  --red: #E10600;
+  --gray: #555555;
+  --gray-dark: #333333;
+  --font-family: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--white);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--red);
+  position: relative;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: var(--red);
+}
+
+nav a {
+  color: var(--white);
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--red);
+  outline: none;
+}
+
+#toggle-theme {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 20;
+  transition: background 0.3s ease;
+}
+
+#toggle-theme:hover,
+#toggle-theme:focus {
+  background: #b10000;
+  outline: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+/* HERO */
+.hero {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-alt);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(225, 6, 0, 0.5);
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--red);
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--red);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #b10000;
+  outline: none;
+}
+
+.hero-img img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--red);
+}
+
+/* EQUIPO */
+.team {
+  grid-column: 1 / -1;
+  margin-top: 3rem;
+}
+
+.team h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--red);
+}
+
+/* Diseño en fila con scroll horizontal */
+.team-grid {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--red) transparent;
+}
+
+.team-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.team-grid::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+  border-radius: 4px;
+}
+
+.player-card {
+  flex: 0 0 180px;
+  min-width: 180px;
+  background-color: var(--background-alt);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(225, 6, 0, 0.5);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.player-card:hover,
+.player-card:focus {
+  transform: scale(1.05);
+  outline: none;
+}
+
+.player-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 0 8px var(--red);
+}
+
+.player-card h3 {
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+
+.role-icon {
+  width: 16px;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+/* DARK MODE */
+body.dark-mode {
+  background-color: var(--white);
+  color: var(--gray-dark);
+}
+
+body.dark-mode header {
+  border-bottom-color: var(--red);
+}
+
+body.dark-mode nav a {
+  color: var(--gray-dark);
+}
+
+body.dark-mode nav a:hover,
+body.dark-mode nav a:focus {
+  color: var(--red);
+}
+
+body.dark-mode #toggle-theme {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+/* Otros estilos básicos */
+section {
+  margin-bottom: 3rem;
+}
+
+/* Scrollbar estilos para body en modo oscuro */
+body.dark-mode ::-webkit-scrollbar {
+  background-color: #ddd;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+  border-radius: 4px;
+}
