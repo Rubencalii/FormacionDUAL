@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Estudio y Descanso 🚀</title>
+<link rel="icon" href="./alarm_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png ">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+  :root {
+    --color-fondo: #121212;
+    --color-primario: #1de9b6;
+    --color-secundario: #ff4081;
+    --color-texto: #e0e0e0;
+    --color-acento: #ffab40;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--color-primario);
+    text-shadow: 0 0 8px var(--color-primario);
+  }
+
+  .card {
+    background: #222;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px var(--color-secundario);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .estado {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: var(--color-secundario);
+    text-shadow: 0 0 10px var(--color-secundario);
+  }
+
+  .timer {
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: var(--color-primario);
+    text-shadow: 0 0 15px var(--color-primario);
+  }
+
+  .inputs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+  }
+
+  .inputs label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-texto);
+  }
+
+  .inputs input {
+    width: 70px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--color-fondo);
+  }
+
+  .inputs input[type="number"]::-webkit-inner-spin-button,
+  .inputs input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  button {
+    padding: 12px 28px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px transparent;
+    color: var(--color-fondo);
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  button#start {
+    background-color: var(--color-primario);
+    box-shadow: 0 0 20px var(--color-primario);
+  }
+  button#start:hover:not(:disabled) {
+    box-shadow: 0 0 30px var(--color-primario);
+    transform: scale(1.05);
+  }
+
+  button#pause {
+    background-color: var(--color-secundario);
+    box-shadow: 0 0 20px var(--color-secundario);
+  }
+  button#pause:hover:not(:disabled) {
+    box-shadow: 0 0 30px var(--color-secundario);
+    transform: scale(1.05);
+  }
+
+  button#reset {
+    background-color: var(--color-acento);
+    box-shadow: 0 0 20px var(--color-acento);
+  }
+  button#reset:hover:not(:disabled) {
+    box-shadow: 0 0 30px var(--color-acento);
+    transform: scale(1.05);
+  }
+
+  #animacion {
+    width: 260px;
+    height: 260px;
+    margin: 0 auto 25px auto;
+  }
+
+  #motivacion {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--color-primario);
+    text-shadow: 0 0 10px var(--color-primario);
+    min-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .fade {
+    animation: fadeIn 1s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+  <h1>Estudio y Descanso 🚀</h1>
+
+  <div class="card">
+    <div class="estado" id="estado">Listo para comenzar</div>
+    <div class="timer" id="timer">00:00</div>
+
+    <div class="inputs">
+      <label for="minEstudio">Estudio (min):</label>
+      <input type="number" id="minEstudio" min="1" max="120" value="25" />
+      
+      <label for="minDescanso">Descanso (min):</label>
+      <input type="number" id="minDescanso" min="1" max="60" value="5" />
+    </div>
+
+    <div class="buttons">
+      <button id="start">▶ Empezar</button>
+      <button id="pause" disabled>⏸ Pausar</button>
+      <button id="reset" disabled>🔄 Reiniciar</button>
+    </div>
+
+    <div id="animacion"></div>
+    <div id="motivacion"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
+  <script>
+    // Variables y estado
+    let tiempoEstudio = 25 * 60;
+    let tiempoDescanso = 5 * 60;
+    let tiempoActual = 0;
+    let enEstudio = true;
+    let intervalo = null;
+    let animacionActual = null;
+
+    // Frases motivacionales para cada modo
+    const frasesEstudio = [
+      "¡Concentra tu mente y da lo mejor! 📚",
+      "¡Cada minuto cuenta! 💪",
+      "¡Estás construyendo tu futuro! 🚀",
+      "¡Mantén el foco y sigue adelante! 🔥",
+      "¡No te rindas, sigue estudiando! ✍️"
+    ];
+
+    const frasesDescanso = [
+      "¡Descansa y recarga energías! ☕",
+      "¡Un buen descanso mejora todo! 🌟",
+      "¡Relájate y prepárate para más! 💪",
+      "¡Respira profundo y suelta la tensión! 🌬️",
+      "¡El descanso es parte del éxito! 🏆"
+    ];
+
+    // Animaciones Lottie para cada modo
+    const animacionesUrls = {
+    estudio: "https://assets10.lottiefiles.com/packages/lf20_sSF6EG.json",
+    descanso: "https://assets10.lottiefiles.com/packages/lf20_pwohahvd.json"
+    };
+
+
+
+
+    // Elementos del DOM
+    const estadoElem = document.getElementById("estado");
+    const timerElem = document.getElementById("timer");
+    const minEstudioInput = document.getElementById("minEstudio");
+    const minDescansoInput = document.getElementById("minDescanso");
+    const motivacionElem = document.getElementById("motivacion");
+    const animacionElem = document.getElementById("animacion");
+    const btnStart = document.getElementById("start");
+    const btnPause = document.getElementById("pause");
+    const btnReset = document.getElementById("reset");
+
+    // Función para formatear segundos a MM:SS
+    function formatoTiempo(s) {
+      const min = String(Math.floor(s / 60)).padStart(2, '0');
+      const seg = String(s % 60).padStart(2, '0');
+      return `${min}:${seg}`;
+    }
+
+    // Validar y actualizar tiempos de inputs
+    function validarTiempos() {
+      let estudio = parseInt(minEstudioInput.value);
+      let descanso = parseInt(minDescansoInput.value);
+
+      if (isNaN(estudio) || estudio < 1) estudio = 25;
+      if (isNaN(descanso) || descanso < 1) descanso = 5;
+
+      if (estudio > 120) estudio = 120;
+      if (descanso > 60) descanso = 60;
+
+      minEstudioInput.value = estudio;
+      minDescansoInput.value = descanso;
+
+      tiempoEstudio = estudio * 60;
+      tiempoDescanso = descanso * 60;
+    }
+
+    // Mostrar frase motivacional aleatoria según modo
+    function mostrarFrase() {
+      motivacionElem.classList.remove("fade");
+      void motivacionElem.offsetWidth; // reflow para reiniciar animación
+
+      let frase;
+      if (enEstudio) {
+        frase = frasesEstudio[Math.floor(Math.random() * frasesEstudio.length)];
+      } else {
+        frase = frasesDescanso[Math.floor(Math.random() * frasesDescanso.length)];
+      }
+      motivacionElem.textContent = frase;
+      motivacionElem.classList.add("fade");
+    }
+
+    // Cargar animación Lottie
+    function cargarAnimacion(modo) {
+      if (animacionActual) {
+        animacionActual.destroy();
+        animacionActual = null;
+      }
+      animacionActual = lottie.loadAnimation({
+        container: animacionElem,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: animacionesUrls[modo]
+      });
+    }
+
+    // Actualizar interfaz según estado
+    function actualizarInterfaz() {
+      validarTiempos();
+
+      if (enEstudio) {
+        estadoElem.textContent = "Modo Estudio";
+        estadoElem.style.color = "var(--color-primario)";
+        timerElem.style.color = "var(--color-primario)";
+        cargarAnimacion("estudio");
+      } else {
+        estadoElem.textContent = "Modo Descanso";
+        estadoElem.style.color = "var(--color-secundario)";
+        timerElem.style.color = "var(--color-secundario)";
+        cargarAnimacion("descanso");
+      }
+
+      mostrarFrase();
+      timerElem.textContent = formatoTiempo(tiempoActual);
+
+      btnStart.disabled = false;
+      btnPause.disabled = true;
+      btnReset.disabled = true;
+
+      minEstudioInput.disabled = false;
+      minDescansoInput.disabled = false;
+    }
+
+    // Función para iniciar el temporizador
+    function iniciarTemporizador() {
+      btnStart.disabled = true;
+      btnPause.disabled = false;
+      btnReset.disabled = false;
+
+      minEstudioInput.disabled = true;
+      minDescansoInput.disabled = true;
+
+      if (tiempoActual <= 0) {
+        tiempoActual = enEstudio ? tiempoEstudio : tiempoDescanso;
+      }
+
+      mostrarFrase();
+
+      intervalo = setInterval(() => {
+        if (tiempoActual > 0) {
+          tiempoActual--;
+          timerElem.textContent = formatoTiempo(tiempoActual);
+        } else {
+          // Cambiar modo y reiniciar
+          enEstudio = !enEstudio;
+          tiempoActual = enEstudio ? tiempoEstudio : tiempoDescanso;
+          actualizarInterfaz();
+          iniciarTemporizador();
+        }
+      }, 1000);
+    }
+
+    // Función para pausar temporizador
+    function pausarTemporizador() {
+      btnStart.disabled = false;
+      btnPause.disabled = true;
+      btnReset.disabled = false;
+
+      clearInterval(intervalo);
+    }
+
+    // Función para reiniciar temporizador
+    function reiniciarTemporizador() {
+      clearInterval(intervalo);
+
+      enEstudio = true;
+      tiempoActual = 0;
+
+      actualizarInterfaz();
+    }
+
+    // Eventos botones
+    btnStart.addEventListener("click", () => {
+      iniciarTemporizador();
+    });
+
+    btnPause.addEventListener("click", () => {
+      pausarTemporizador();
+    });
+
+    btnReset.addEventListener("click", () => {
+      reiniciarTemporizador();
+    });
+
+    // Cuando cambian los inputs
+    minEstudioInput.addEventListener("change", () => {
+      validarTiempos();
+      if (enEstudio) {
+        tiempoEstudio = parseInt(minEstudioInput.value) * 60;
+        tiempoActual = tiempoEstudio;
+        timerElem.textContent = formatoTiempo(tiempoActual);
+      }
+    });
+
+    minDescansoInput.addEventListener("change", () => {
+      validarTiempos();
+      if (!enEstudio) {
+        tiempoDescanso = parseInt(minDescansoInput.value) * 60;
+        tiempoActual = tiempoDescanso;
+        timerElem.textContent = formatoTiempo(tiempoActual);
+      }
+    });
+
+    // Inicializar
+    actualizarInterfaz();
+  </script>
+</body>
+</html>
