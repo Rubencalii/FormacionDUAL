@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Historia de Amor</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background: #fef7f0;
+}
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+  margin: 1rem;
+  background-size: cover;
+  background-position: center;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+h2, h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #c96;
+  margin-bottom: 1rem;
+}
+p {
+  font-size: 1.5rem;
+  color: #444;
+  max-width: 600px;
+}
+.corazones {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.corazon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 80%, 25% 100%, 0% 35%);
+  animation: flotar 10s infinite ease-in;
+}
+@keyframes flotar {
+  0% { transform: translateY(100vh) scale(1); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+}
+.galeria-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem 1rem 0.5rem 0.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: 3px solid #f8c;
+  cursor: pointer;
+  animation: aparecer 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+@keyframes aparecer {
+  to { opacity: 1; transform: translateY(0); }
+}
+.galeria-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  display: block;
+}
+.galeria-item .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 192, 203, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.galeria-item:hover img {
+  transform: scale(1.1);
+  filter: blur(2px);
+}
+.galeria-item:hover .overlay {
+  opacity: 1;
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  color: #fff;
+  font-family: 'Great Vibes', cursive;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+.lightbox .titulo {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.lightbox .flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  cursor: pointer;
+  user-select: none;
+  color: #fff;
+  padding: 0 1rem;
+}
+.lightbox .flecha.izq { left: 0; }
+.lightbox .flecha.der { right: 0; }
+</style>
+</head>
+<body>
+<div class="corazones" id="corazones"></div>
+<div class="linea-tiempo"></div>
+
+<section class="slide" style="background-image: url('https://placekitten.com/1600/901');">
+  <h2>Nuestra historia</h2>
+</section>
+
+<section class="slide" style="background-image: url('https://placekitten.com/1600/902');">
+  <h3>Enero 2010</h3>
+  <p>Éramos muy jóvenes para darnos cuenta</p>
+</section>
+
+<section class="slide" style="background-image: url('https://placekitten.com/1600/903');">
+  <p>Del hermoso viaje</p>
+</section>
+
+<section class="slide" style="background-image: url('https://placekitten.com/1600/904');">
+  <p>El tiempo parecía detenerse por momentos</p>
+</section>
+
+<section class="slide" style="background-image: url('https://placekitten.com/1600/905');">
+  <p>Y correr a toda velocidad en otros</p>
+</section>
+
+<section class="slide" style="background-image: url('https://placekitten.com/1600/906');">
+  <p>Si solo corriera en los momentos difíciles... pero no podemos escoger</p>
+</section>
+
+<section class="slide" style="background-image: url('https://placekitten.com/1600/907');">
+  <p>Solo podemos avanzar y crecer juntos</p>
+</section>
+
+<section class="slide" style="background-image: url('https://placekitten.com/1600/908');">
+  <h2>Recuerdos en Imágenes</h2>
+  <div class="galeria" id="galeria">
+    <a href="https://placekitten.com/800/600" class="galeria-item" data-title="Recuerdo 1">
+      <img src="https://placekitten.com/400/300" alt="Recuerdo 1">
+      <div class="overlay">❤</div>
+    </a>
+    <a href="https://placekitten.com/801/600" class="galeria-item" data-title="Recuerdo 2">
+      <img src="https://placekitten.com/401/300" alt="Recuerdo 2">
+      <div class="overlay">❤</div>
+    </a>
+    <a href="https://placekitten.com/802/600" class="galeria-item" data-title="Recuerdo 3">
+      <img src="https://placekitten.com/402/300" alt="Recuerdo 3">
+      <div class="overlay">❤</div>
+    </a>
+    <a href="https://placekitten.com/803/600" class="galeria-item" data-title="Recuerdo 4">
+      <img src="https://placekitten.com/403/300" alt="Recuerdo 4">
+      <div class="overlay">❤</div>
+    </a>
+    <a href="https://placekitten.com/804/600" class="galeria-item" data-title="Recuerdo 5">
+      <img src="https://placekitten.com/404/300" alt="Recuerdo 5">
+      <div class="overlay">❤</div>
+    </a>
+    <a href="https://placekitten.com/805/600" class="galeria-item" data-title="Recuerdo 6">
+      <img src="https://placekitten.com/405/300" alt="Recuerdo 6">
+      <div class="overlay">❤</div>
+    </a>
+    <a href="https://placekitten.com/805/600" class="galeria-item" data-title="Recuerdo 6">
+      <img src="https://placekitten.com/405/300" alt="Recuerdo 6">
+      <div class="overlay">❤</div>
+    </a>
+    <a href="https://placekitten.com/805/600" class="galeria-item" data-title="Recuerdo 6">
+      <img src="https://placekitten.com/405/300" alt="Recuerdo 6">
+      <div class="overlay">❤</div>
+    </a>
+    <a href="https://placekitten.com/805/600" class="galeria-item" data-title="Recuerdo 6">
+      <img src="https://placekitten.com/405/300" alt="Recuerdo 6">
+      <div class="overlay">❤</div>
+    </a>
+    <a href="https://placekitten.com/805/600" class="galeria-item" data-title="Recuerdo 6">
+      <img src="https://placekitten.com/405/300" alt="Recuerdo 6">
+      <div class="overlay">❤</div>
+    </a>
+    
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <div class="flecha izq" id="prev">&#10094;</div>
+  <img id="lightbox-img" src="" alt="">
+  <div class="titulo" id="lightbox-title"></div>
+  <div class="flecha der" id="next">&#10095;</div>
+</div>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+slides.forEach(slide => observer.observe(slide));
+
+const contenedor = document.getElementById('corazones');
+for (let i = 0; i < 80; i++) {
+  const c = document.createElement('div');
+  c.classList.add('corazon');
+  c.style.left = `${Math.random() * 100}%`;
+  c.style.animationDuration = `${5 + Math.random() * 10}s`;
+  c.style.opacity = Math.random();
+  contenedor.appendChild(c);
+}
+
+const items = [...document.querySelectorAll('.galeria-item')];
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxTitle = document.getElementById('lightbox-title');
+let current = 0;
+
+items.forEach((item, index) => {
+  observer.observe(item);
+  item.addEventListener('click', e => {
+    e.preventDefault();
+    current = index;
+    showLightbox();
+  });
+});
+
+function showLightbox() {
+  const item = items[current];
+  lightboxImg.src = item.href;
+  lightboxTitle.textContent = item.dataset.title;
+  lightbox.style.display = 'flex';
+}
+
+document.getElementById('prev').addEventListener('click', e => {
+  e.stopPropagation();
+  current = (current - 1 + items.length) % items.length;
+  showLightbox();
+});
+document.getElementById('next').addEventListener('click', e => {
+  e.stopPropagation();
+  current = (current + 1) % items.length;
+  showLightbox();
+});
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+</script>
+</body>
+</html>
