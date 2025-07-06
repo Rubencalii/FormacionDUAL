@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #f5f5f5;
+  background-color: #121212;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content h1 {
+  font-size: 4.5rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  opacity: 0.9;
+}
+
+.scroll-down {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-12px);}
+  60% {transform: translateY(-6px);}
+}
+
+.navbar {
+  background-color: #1c1c1c;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: #f5f5f5;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+.navbar a:hover {
+  background: #333;
+  color: #ffd700;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #ffd700;
+}
+
+section p, section li, section blockquote {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.albums {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.album {
+  background-color: #222;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.album:hover {
+  transform: translateY(-5px);
+  background-color: #333;
+}
+
+.galeria .fotos {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galeria img {
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+blockquote {
+  font-style: italic;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 700px;
+  color: #aaa;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #1c1c1c;
+  font-size: 0.95rem;
+  color: #888;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: underline;
+}

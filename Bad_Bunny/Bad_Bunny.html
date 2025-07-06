@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bad Bunny - Fan Page</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+<header class="hero" role="banner">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="BAD BUNNY - BOKeTE (Video Oficial) _ DeBÍ TiRAR MáS FOToS.mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
+  <div class="hero-content">
+    <h1>Bad Bunny</h1>
+    <p>El Conejo Malo - Fan Page Oficial</p>
+    <a href="#biografia" class="scroll-down" aria-label="Ver más">⬇</a>
+  </div>
+</header>
+
+<nav class="navbar" role="navigation">
+  <ul>
+    <li><a href="#biografia">Biografía</a></li>
+    <li><a href="#logros">Premios</a></li>
+    <li><a href="#discografia">Discografía</a></li>
+    <li><a href="#galeria">Galería</a></li>
+    <li><a href="#fans">Fans</a></li>
+    <li><a href="#prensa">Prensa</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section id="biografia" class="intro" data-aos="fade-up">
+    <h2>Biografía</h2>
+    <p>Benito Antonio Martínez Ocasio, conocido como Bad Bunny, nació el 10 de marzo de 1994 en Puerto Rico. Desde su debut en 2016, se ha convertido en uno de los artistas más influyentes de la música urbana latina, rompiendo barreras culturales y redefiniendo géneros.</p>
+  </section>
+
+  <section id="logros" class="logros" data-aos="fade-right">
+    <h2>Premios y Logros</h2>
+    <ul>
+      <li>Grammy al Mejor Álbum Urbano (2021)</li>
+      <li>Artista del Año - Billboard Latin (2022)</li>
+      <li>Ícono Cultural Latino - Time Magazine</li>
+      <li>Top Artist Global - Spotify</li>
+    </ul>
+  </section>
+
+  <section id="discografia" class="discografia" data-aos="fade-left">
+    <h2>Discografía</h2>
+    <div class="albums">
+      <article class="album">
+        <h3>YHLQMDLG (2020)</h3>
+        <p>Incluye éxitos como "Vete" y "Safaera".</p>
+      </article>
+      <article class="album">
+        <h3>El Último Tour del Mundo (2020)</h3>
+        <p>Primer álbum en español en alcanzar el #1 en Billboard 200.</p>
+      </article>
+      <article class="album">
+        <h3>Un Verano Sin Ti (2022)</h3>
+        <p>Álbum más escuchado globalmente en 2022.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="galeria" class="galeria" data-aos="zoom-in">
+    <h2>Galería</h2>
+    <div class="fotos">
+      <figure><img src="https://imgs.search.brave.com/fmp-qCoeZCu9bwrgItNoWjaIPsAhBH12ZbHM5D7t4jw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuZWxkaWFyaW8u/ZXMvY2xpcC8zY2Yw/ZDQyNS1kZjcxLTQ3/MjgtYjRjYy0xZjg0/YmY3MTBkNmFfMTYt/OS1kaXNjb3Zlci1h/c3BlY3QtcmF0aW9f/ZGVmYXVsdF8wLmpw/Zw" alt="Bad Bunny en concierto"></figure>
+      <figure><img src="https://www.eluniverso.com/resizer/v2/V5BOMF2KXVCLXLFKIG57AALAQE.jfif?auth=14b480129e64c43ac731375d94ab72edf9ce266c17550481def14ffd5a3ea12f&width=893&height=670&quality=75&smart=true"></figure>
+      <figure><img src="https://www.hola.com/horizon/original_aspect_ratio/7f70b26fe479-bad-bunny.jpg?im=Resize=(640),type=downsize" alt="Premiación"></figure>
+    </div>
+  </section>
+
+  <section id="fans" class="fans" data-aos="fade-up">
+    <h2>Testimonios de Fans</h2>
+    <blockquote>“Su música cambió mi vida y la forma en que veo la cultura latina.”</blockquote>
+    <blockquote>“Bad Bunny es una inspiración para toda una generación.”</blockquote>
+  </section>
+
+  <section id="prensa" class="prensa" data-aos="fade-in">
+    <h2>En la Prensa</h2>
+    <div class="articulos">
+      <article>
+        <h3>El fenómeno global de Bad Bunny</h3>
+        <p>Cómo se convirtió en una figura clave del entretenimiento mundial.</p>
+        <a href="#">Leer más</a>
+      </article>
+      <article>
+        <h3>Rompiendo récords en la industria</h3>
+        <p>El artista latino más escuchado de la historia en Spotify.</p>
+        <a href="#">Leer más</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Fan Page de Bad Bunny | Síguenos en <a href="#">Instagram</a> y <a href="#">Twitter</a></p>
+</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1200
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+</body>
+</html>
