@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elden Ring Scroll</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Georgia', serif;
+      background-color: #0a0a0a;
+      color: #f5f5f5;
+    }
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      padding: 2rem;
+      z-index: 1;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 1s ease-in-out;
+    }
+    .intro {
+      background: url('https://wallpaperaccess.com/full/6564147.jpg') center/cover no-repeat;
+      color: #fff;
+    }
+    .intro h1 {
+      font-size: 4rem;
+      text-shadow: 0 0 20px #000;
+      animation: zoomFade 2s ease-in-out;
+    }
+    @keyframes zoomFade {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .bosses, .classes, .map, .weapons, .lore, .multiplayer, .credits {
+      background: #111;
+    }
+    .section-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    audio {
+      display: none;
+    }
+    #particles-js, #fog-overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+    #hud {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+      color: #e8d26d;
+      background: rgba(0,0,0,0.6);
+      padding: 10px 20px;
+      border: 2px solid #e8d26d;
+      border-radius: 10px;
+      font-family: 'Georgia', serif;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div id="fog-overlay"></div>
+  <canvas id="bg"></canvas>
+  <audio id="bg-music" src="https://vgmsite.com/soundtracks/elden-ring-complete-original-soundtrack-2022/fljcfuyfhb/1-01.%20Elden%20Ring.mp3" autoplay loop></audio>
+  <div id="hud">HP ▬▬▬▬▬▬▬▬ ST ▬▬▬▬▬▬▬▬▬</div>
+
+  <section class="intro">
+    <h1>Elden Ring</h1>
+    <p>El Círculo se ha roto... La gracia te guía.</p>
+  </section>
+
+  <section class="history">
+    <div>
+      <h2 class="section-title">Historia Principal</h2>
+      <p>Sumérgete en las Tierras Intermedias tras la destrucción del Círculo de Elden...</p>
+    </div>
+  </section>
+
+  <section class="classes">
+    <div>
+      <h2 class="section-title">Clases Iniciales</h2>
+      <p>Samurái, Astrologo, Profeta, Prisionero... cada clase tiene su camino.</p>
+    </div>
+  </section>
+
+  <section class="map">
+    <div>
+      <h2 class="section-title">Mapa y Regiones</h2>
+      <p>Desde Nécrolimbo hasta Farum Azula, explora cada rincón del mundo abierto.</p>
+    </div>
+  </section>
+
+  <section class="bosses">
+    <div>
+      <h2 class="section-title">Jefes Legendarios</h2>
+      <p>Radahn, Malenia, Margit... cada uno una leyenda viviente.</p>
+      <img src="https://static.wikia.nocookie.net/eldenring/images/b/b9/Radahn_render.png" width="300" />
+    </div>
+  </section>
+
+  <section class="weapons">
+    <div>
+      <h2 class="section-title">Armas y Magias</h2>
+      <p>Espadas colosales, encantamientos dracónicos, invocaciones espectrales...</p>
+      <img src="https://static.wikia.nocookie.net/eldenring/images/e/e9/Rivers_of_Blood.png" width="200" />
+    </div>
+  </section>
+
+  <section class="multiplayer">
+    <div>
+      <h2 class="section-title">Multijugador e Invocaciones</h2>
+      <p>Ayuda, invasión, duelo. Conecta con otros Sinluz.</p>
+      <img src="https://static.wikia.nocookie.net/eldenring/images/2/22/Red_Summon_Sign.png" width="100" />
+    </div>
+  </section>
+
+  <section class="lore">
+    <div>
+      <h2 class="section-title">Lore y Mitología</h2>
+      <p>Descubre el mundo detrás del mundo. Mitos, dioses, y secretos enterrados.</p>
+    </div>
+  </section>
+
+  <section class="credits">
+    <div>
+      <h2 class="section-title">Créditos y Tributo</h2>
+      <p>Hidetaka Miyazaki, George R. R. Martin, FromSoftware.</p>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80 },
+        size: { value: 3 },
+        color: { value: "#e8d26d" },
+        move: { speed: 1 },
+        line_linked: { enable: false },
+      },
+      interactivity: {
+        events: { onhover: { enable: true, mode: 'repulse' } }
+      }
+    });
+
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          const audio = new Audio('https://www.myinstants.com/media/sounds/sword.mp3');
+          audio.volume = 0.1;
+          audio.play();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Niebla
+    const fogCanvas = document.createElement('canvas');
+    fogCanvas.width = window.innerWidth;
+    fogCanvas.height = window.innerHeight;
+    document.getElementById('fog-overlay').appendChild(fogCanvas);
+    const ctx = fogCanvas.getContext('2d');
+    function drawFog() {
+      ctx.clearRect(0, 0, fogCanvas.width, fogCanvas.height);
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.03)';
+      for (let i = 0; i < 100; i++) {
+        const x = Math.random() * fogCanvas.width;
+        const y = Math.random() * fogCanvas.height;
+        const radius = Math.random() * 100;
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      requestAnimationFrame(drawFog);
+    }
+    drawFog();
+  </script>
+
+  <script type="module">
+    import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.module.js';
+    import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.157.0/examples/jsm/loaders/GLTFLoader.js';
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('bg'), alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+
+    const light = new THREE.PointLight(0xffffff, 1);
+    light.position.set(20, 20, 20);
+    scene.add(light);
+    scene.add(new THREE.AmbientLight(0x404040));
+
+    camera.position.z = 30;
+
+    const loader = new GLTFLoader();
+    loader.load('https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/main/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf', gltf => {
+      const model = gltf.scene;
+      model.scale.set(10, 10, 10);
+      model.rotation.y = Math.PI;
+      scene.add(model);
+
+      function animate() {
+        requestAnimationFrame(animate);
+        model.rotation.y += 0.005;
+        renderer.render(scene, camera);
+      }
+      animate();
+    });
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>
