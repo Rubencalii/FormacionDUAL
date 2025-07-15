@@ -17,6 +17,83 @@ if (isset($_GET['remove'])) {
 }
 ?>
 
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  :root {
+    --clr-main: #004ECC;
+    --clr-yellow: #FFD600;
+    --clr-white: #FFFFFF;
+  }
+
+  body {
+    background-color: var(--clr-white);
+    font-family: 'Rubik', sans-serif;
+  }
+
+  h2 {
+    color: var(--clr-main);
+    font-weight: 700;
+  }
+
+  .btn-primary {
+    background-color: var(--clr-main);
+    border-color: var(--clr-main);
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  .btn-primary:hover {
+    background-color: var(--clr-yellow);
+    border-color: var(--clr-yellow);
+    color: var(--clr-main);
+  }
+
+  .btn-secondary {
+    background-color: var(--clr-yellow);
+    border-color: var(--clr-yellow);
+    color: var(--clr-main);
+    font-weight: 600;
+  }
+  .btn-secondary:hover {
+    background-color: var(--clr-main);
+    border-color: var(--clr-main);
+    color: var(--clr-white);
+  }
+
+  .btn-success {
+    background-color: var(--clr-main);
+    border-color: var(--clr-main);
+    font-weight: 700;
+  }
+  .btn-success:hover {
+    background-color: var(--clr-yellow);
+    border-color: var(--clr-yellow);
+    color: var(--clr-main);
+  }
+
+  table.table {
+    border: 2px solid var(--clr-main);
+  }
+
+  thead.table-dark {
+    background-color: var(--clr-main) !important;
+    color: var(--clr-white) !important;
+  }
+
+  tbody tr:hover {
+    background-color: var(--clr-yellow);
+    color: var(--clr-main);
+  }
+
+  .alert-info {
+    background-color: var(--clr-yellow);
+    color: var(--clr-main);
+    border: none;
+    font-weight: 600;
+  }
+</style>
+
 <div class="container mt-4">
     <h2 class="mb-4">🛒 Carrito de compras</h2>
 

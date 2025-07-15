@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --clr-main: #4b33a8;
-    --clr-main-light: #785ce9;
-    --clr-white: #ececec;
-    --clr-gray: #e2e2e2;
-    --clr-red: #961818;
+    --clr-main: #0052cc;          /* azul */
+    --clr-main-light: #ffcc00;    /* amarillo */
+    --clr-white: #ffffff;         /* blanco */
+    --clr-gray: #f0f4f9;          /* gris claro para fondos suaves */
+    --clr-red: #961818;           /* rojo sigue igual para eliminar */
 }
 
 * {
@@ -69,10 +69,11 @@ aside {
     padding: 1rem;
     font-size: .85rem;
     width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .boton-menu.active {
-    background-color: var(--clr-white);
+    background-color: var(--clr-main-light);
     color: var(--clr-main);
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
@@ -88,7 +89,7 @@ aside {
     right: 0;
     background-color: transparent;
     border-bottom-right-radius: .5rem;
-    box-shadow: 0 1rem 0 var(--clr-white);
+    box-shadow: 0 1rem 0 var(--clr-main-light);
 }
 
 .boton-menu.active::after {
@@ -100,7 +101,7 @@ aside {
     right: 0;
     background-color: transparent;
     border-top-right-radius: .5rem;
-    box-shadow: 0 -1rem 0 var(--clr-white);
+    box-shadow: 0 -1rem 0 var(--clr-main-light);
 }
 
 .boton-menu > i.bi-hand-index-thumb-fill,
@@ -113,10 +114,11 @@ aside {
 }
 
 .numerito {
-    background-color: var(--clr-white);
+    background-color: var(--clr-main-light);
     color: var(--clr-main);
     padding: .15rem .25rem;
     border-radius: .25rem;
+    font-weight: 700;
 }
 
 .boton-carrito.active .numerito {
@@ -135,6 +137,7 @@ main {
     margin-left: 0;
     border-radius: 2rem;
     padding: 3rem;
+    color: var(--clr-main);
 }
 
 .titulo-principal {
@@ -185,7 +188,6 @@ main {
     background-color: var(--clr-main);
     color: var(--clr-white);
 }
-
 
 /** CARRITO **/
 
@@ -382,11 +384,7 @@ main {
         flex-wrap: wrap;
         row-gap: 1rem;
     }
-    
-
 }
-
-
 
 @media screen and (max-width: 400px) {
     .contenedor-productos {

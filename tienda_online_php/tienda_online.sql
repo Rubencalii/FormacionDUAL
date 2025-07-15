@@ -31,3 +31,16 @@ CREATE TABLE pedidos_detalle (
     FOREIGN KEY (pedido_id) REFERENCES pedidos(id),
     FOREIGN KEY (producto_id) REFERENCES productos(id)
 );
+
+--
+-- Tabla `pagos`
+--
+CREATE TABLE IF NOT EXISTS pagos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pedido_id INT NOT NULL,
+    stripe_payment_intent VARCHAR(255),
+    monto DECIMAL(10,2) NOT NULL,
+    estado ENUM('pending','succeeded','failed') DEFAULT 'pending',
+    fecha DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (pedido_id) REFERENCES pedidos(id)
+);
