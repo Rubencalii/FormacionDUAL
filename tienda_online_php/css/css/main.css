@@ -15,6 +15,11 @@
     font-family: 'Rubik', sans-serif;
 }
 
+.logo-img {
+    max-width: 150px;
+    height: auto;
+}
+
 h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul {
     margin: 0;
     padding: 0;
@@ -47,8 +52,8 @@ aside {
 }
 
 .logo {
-    font-weight: 400;
-    font-size: 1.3rem;
+    font-weight: 1000;
+    font-size: 2rem;
 }
 
 .menu {
