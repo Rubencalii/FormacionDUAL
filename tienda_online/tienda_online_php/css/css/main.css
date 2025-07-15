@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --clr-main: #0052cc;          /* azul */
-    --clr-main-light: #ffcc00;    /* amarillo */
-    --clr-white: #ffffff;         /* blanco */
-    --clr-gray: #f0f4f9;          /* gris claro para fondos suaves */
-    --clr-red: #961818;           /* rojo sigue igual para eliminar */
+    --clr-main: #0052cc;
+    --clr-main-light: #ffcc00;
+    --clr-white: #ffffff;
+    --clr-gray: #f0f4f9;
+    --clr-red: #961818;
 }
 
 * {
@@ -308,7 +308,6 @@ main {
 }
 
 @media screen and (max-width: 600px) {
-
     .wrapper {
         min-height: 100vh;
         display: flex;
@@ -395,4 +394,57 @@ main {
     .contenedor-productos {
         grid-template-columns: 1fr;
     }
+}
+
+/* NUEVO: estilo unificado para productos */
+.producto {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-gray);
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 100%;
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.detalle-producto {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.detalle-producto h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.detalle-producto span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--clr-main);
+}
+
+.detalle-producto button {
+    align-self: start;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--clr-main);
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.detalle-producto button:hover {
+    background-color: var(--clr-main-light);
+    color: var(--clr-main);
 }
