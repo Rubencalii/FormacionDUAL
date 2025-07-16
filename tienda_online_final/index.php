@@ -17,6 +17,15 @@ $resultado = $conn->query($sql);
 </head>
 <body>
 
+<div style="position: absolute; top: 10px; right: 10px;">
+    <a href="admin_login.php">
+        <button style="padding: 10px 20px; background-color: #333; color: white; border: none; cursor: pointer;">
+            Admin
+        </button>
+    </a>
+</div>
+
+
 <div class="wrapper">
     <header class="header-mobile">
         <h1 class="logo">EpokaShop</h1>

@@ -5,8 +5,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $clave = $_POST["clave"];
 
     if ($usuario === "admin" && $clave === "Rcorralr123") {
-        $_SESSION["admin"] = true;
-        header("Location: ../index.php");
+        $_SESSION["admin_logged_in"] = true;
+        header("Location: admin.php");
         exit;
     } else {
         $error = "Usuario o contraseña incorrectos.";

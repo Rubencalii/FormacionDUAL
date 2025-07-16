@@ -1,5 +1,14 @@
 <?php
 session_start();
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+    http_response_code(403);
+    echo "Acceso denegado.";
+    exit;
+}
+?>
+
+<?php
+session_start();
 if (!isset($_SESSION["admin"]) || $_SESSION["admin"] !== true) {
     header("Location: index.php");
     exit;

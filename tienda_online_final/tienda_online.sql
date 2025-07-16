@@ -44,3 +44,8 @@ CREATE TABLE IF NOT EXISTS pagos (
     fecha DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (pedido_id) REFERENCES pedidos(id)
 );
+
+-- Añadimos imagen y stock a productos
+
+ALTER TABLE productos ADD COLUMN imagen VARCHAR(255) DEFAULT NULL;
+ALTER TABLE productos ADD COLUMN stock INT DEFAULT 0;
