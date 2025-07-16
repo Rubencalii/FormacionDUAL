@@ -1,51 +1,30 @@
-CREATE DATABASE IF NOT EXISTS tienda_online;
+-- Base de datos: tienda_online
+DROP DATABASE IF EXISTS tienda_online;
+CREATE DATABASE tienda_online;
 USE tienda_online;
 
-CREATE TABLE usuarios (
+-- Tabla de productos
+CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(255) UNIQUE NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion TEXT NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    imagen VARCHAR(255),
+    stock INT DEFAULT 0
+);
+
+-- Tabla de administradores
+CREATE TABLE admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE productos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(255) NOT NULL,
-    descripcion TEXT,
-    precio DECIMAL(10,2) NOT NULL,
-    stock INT NOT NULL,
-    imagen VARCHAR(255)
+-- Insertar un administrador por defecto (usuario: admin, contraseña: admin123)
+INSERT INTO admins (usuario, password)
+VALUES (
+  'admin',
+  '$2y$10$UtYrrqxEQKTTAcZ8o0M4Neae6xsh9dRGSfXUErMRFxJmS0J9b7rN2'
 );
 
-CREATE TABLE pedidos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    usuario_id INT NOT NULL,
-    fecha DATETIME,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
-);
 
-CREATE TABLE pedidos_detalle (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    pedido_id INT NOT NULL,
-    producto_id INT NOT NULL,
-    cantidad INT NOT NULL,
-    FOREIGN KEY (pedido_id) REFERENCES pedidos(id),
-    FOREIGN KEY (producto_id) REFERENCES productos(id)
-);
-
---
--- Tabla `pagos`
---
-CREATE TABLE IF NOT EXISTS pagos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    pedido_id INT NOT NULL,
-    stripe_payment_intent VARCHAR(255),
-    monto DECIMAL(10,2) NOT NULL,
-    estado ENUM('pending','succeeded','failed') DEFAULT 'pending',
-    fecha DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (pedido_id) REFERENCES pedidos(id)
-);
-
--- Añadimos imagen y stock a productos
-
-ALTER TABLE productos ADD COLUMN imagen VARCHAR(255) DEFAULT NULL;
-ALTER TABLE productos ADD COLUMN stock INT DEFAULT 0;
